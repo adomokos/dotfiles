@@ -28,7 +28,8 @@ set laststatus=2
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
 " Default color scheme
-color desert
+color wombat
+set t_Co=256
 
 " Ignore arrow keys in vim
 :map <Left> <Nop>
