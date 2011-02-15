@@ -49,3 +49,8 @@ set t_Co=256
 :map! <PageDown> <Nop>
 :map! <Home> <Nop>
 :map! <End> <Nop>
+
+" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
