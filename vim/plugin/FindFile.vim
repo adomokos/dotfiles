@@ -146,7 +146,7 @@ fun! <SID>EscapeChars(toEscape)
 endfun
 
 fun! <SID>CacheDir(...)
-	echo "Finding files to cache..."
+	echo "Building file cache, please wait..."
 	for d in a:000
 		"Creates the dictionary that will parse all files recursively
 		for i in g:FindFileIgnore
