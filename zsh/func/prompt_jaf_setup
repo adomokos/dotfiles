@@ -71,7 +71,7 @@ function prompt_jaf_scm_time_since_commit() {
 
 function prompt_jaf_scm_info() {
     if zgit_inworktree; then
-      echo "($(prompt_wunjo_scm_branch))"
+      echo "($(prompt_jaf_scm_time_since_commit)$(prompt_wunjo_scm_branch))"
     fi
 }
 
