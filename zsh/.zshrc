@@ -25,6 +25,7 @@ alias w3='cd ~/Sites/within3/big_red'
 alias br='cd ~/Sites/within3/br_forked'
 alias gorails='cd ~/Programming/Rails'
 alias goruby='cd ~/Programming/Ruby'
+alias bctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 ###### Directory Shortcuts
 

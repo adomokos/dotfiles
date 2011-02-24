@@ -54,3 +54,8 @@ set t_Co=256
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+" ctags settings
+let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>
