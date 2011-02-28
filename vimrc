@@ -59,3 +59,9 @@ endif
 let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin"
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
+
+" set commentstrings
+if !exists("autocmmands_loaded")
+  let autocommands_loaded = 1
+  autocmd FileType ruby set commentstring=#%s
+endif
