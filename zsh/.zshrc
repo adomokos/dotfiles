@@ -18,7 +18,6 @@ set -o vi
 ###### Aliases
 
 alias ll='/bin/ls -Gla'
-alias gs='git status'
 alias gsp='git stash pop'
 alias gf='git fetch'
 alias w3='cd ~/Sites/within3/big_red'
