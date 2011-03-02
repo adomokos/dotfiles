@@ -40,7 +40,7 @@ pless() {
 }
 
 e() {
-  $EDITOR -g $*
+  $EDITOR $*
 }
 
 reload() {
