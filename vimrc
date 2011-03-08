@@ -2,6 +2,7 @@ set nocompatible
 
 set nonumber
 set ruler
+set hidden
 syntax on
 
 " Whitespace stuff
@@ -21,14 +22,22 @@ set smartcase
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
 
+" Don't clutter my directories with swap files, bitch!
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Status bar
 set laststatus=2
+
+" Make sure vim can read shell settings (sourced in ~/.profile)
+set shell=/bin/sh
 
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 
 " Default color scheme
-color wombat
+color slate
 set t_Co=256
 
 " Ignore arrow keys in vim
@@ -49,6 +58,11 @@ set t_Co=256
 :map! <PageDown> <Nop>
 :map! <Home> <Nop>
 :map! <End> <Nop>
+
+" Edit a file in the directory of the file currently being edited
+:map ,e :e <C-R>=expand("%:p:h") . "/"<CR>
+
+:map ,, <C-^>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
