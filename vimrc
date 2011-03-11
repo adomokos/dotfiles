@@ -35,34 +35,37 @@ set shell=/bin/sh
 
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {*.liquid}    set ft=liquid
 
 " Default color scheme
 color slate
 set t_Co=256
 
 " Ignore arrow keys in vim
-:map <Left> <Nop>
-:map <Right> <Nop>
-:map <Up> <Nop>
-:map <Down> <Nop>
-:map <PageUp> <Nop>
-:map <PageDown> <Nop>
-:map <Home> <Nop>
-:map <End> <Nop>
+" :map <Left> <Nop>
+" :map <Right> <Nop>
+" :map <Up> <Nop>
+" :map <Down> <Nop>
+" :map <PageUp> <Nop>
+" :map <PageDown> <Nop>
+" :map <Home> <Nop>
+" :map <End> <Nop>
 
-:map! <Left> <Nop>
-:map! <Right> <Nop>
-:map! <Up> <Nop>
-:map! <Down> <Nop>
-:map! <PageUp> <Nop>
-:map! <PageDown> <Nop>
-:map! <Home> <Nop>
-:map! <End> <Nop>
+" :map! <Left> <Nop>
+" :map! <Right> <Nop>
+" :map! <Up> <Nop>
+" :map! <Down> <Nop>
+" :map! <PageUp> <Nop>
+" :map! <PageDown> <Nop>
+" :map! <Home> <Nop>
+" :map! <End> <Nop>
 
 " Edit a file in the directory of the file currently being edited
-:map ,e :e <C-R>=expand("%:p:h") . "/"<CR>
+map ,e :e <C-R>=expand("%:p:h") . "/"<CR>
 
-:map ,, <C-^>
+map ,, <C-^>
+
+map <C-c> <ESC>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
@@ -79,3 +82,6 @@ if !exists("autocmmands_loaded")
   let autocommands_loaded = 1
   autocmd FileType ruby set commentstring=#%s
 endif
+
+" pathogen configuration
+call pathogen#runtime_append_all_bundles()
