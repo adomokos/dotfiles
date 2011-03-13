@@ -4,6 +4,7 @@ set nonumber
 set ruler
 set hidden
 syntax on
+filetype plugin on
 
 " Whitespace stuff
 set nowrap
