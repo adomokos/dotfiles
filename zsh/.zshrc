@@ -109,3 +109,6 @@ prompt jaf
 ###### rvm
 
 if [[ -s /Users/adomokos/.rvm/scripts/rvm ]] ; then source /Users/adomokos/.rvm/scripts/rvm ; fi
+
+###### bundler-exec
+if [[ -s /Users/adomokos/dotfiles/shell_scripts/bundler-exec.sh ]] ; then source /Users/adomokos/dotfiles/shell_scripts/bundler-exec.sh ; fi
