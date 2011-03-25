@@ -42,25 +42,6 @@ au BufRead,BufNewFile {*.liquid}    set ft=liquid
 color slate
 set t_Co=256
 
-" Ignore arrow keys in vim
-" :map <Left> <Nop>
-" :map <Right> <Nop>
-" :map <Up> <Nop>
-" :map <Down> <Nop>
-" :map <PageUp> <Nop>
-" :map <PageDown> <Nop>
-" :map <Home> <Nop>
-" :map <End> <Nop>
-
-" :map! <Left> <Nop>
-" :map! <Right> <Nop>
-" :map! <Up> <Nop>
-" :map! <Down> <Nop>
-" :map! <PageUp> <Nop>
-" :map! <PageDown> <Nop>
-" :map! <Home> <Nop>
-" :map! <End> <Nop>
-
 " Edit a file in the directory of the file currently being edited
 map ,e :e <C-R>=expand("%:p:h") . "/"<CR>
 
@@ -74,9 +55,9 @@ if filereadable(expand("~/.vimrc.local"))
 endif
 
 " ctags settings
-let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin"
-let Tlist_WinWidth = 50
-map <F4> :TlistToggle<cr>
+"let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin"
+"let Tlist_WinWidth = 50
+"map <F4> :TlistToggle<cr>
 
 " set commentstrings
 if !exists("autocmmands_loaded")
