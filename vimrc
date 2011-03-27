@@ -5,6 +5,8 @@ set ruler
 set hidden
 syntax on
 filetype plugin on
+set visualbell " no beeping, thx
+set autoindent
 
 " Whitespace stuff
 set nowrap
