@@ -41,15 +41,15 @@ snippet after-
 
 # it should
 snippet it
-	it "should ${1:description}" do
+	it "${1:description}" do
 		${2}
 	end
 snippet itsh
-	it "should ${1:description}" do
+	it "${1:description}" do
 		${2:model}.should ${3}
 	end
 snippet itshbe
-	it "should ${1:description}" do
+	it "${1:description}" do
   		${2:model}.should be_${3}
 	end
 
