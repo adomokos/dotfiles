@@ -1,0 +1,10 @@
+[user]
+	name = Attila Domokos
+	email = adomokos@gmail.com
+[color]
+	ui = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
