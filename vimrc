@@ -43,13 +43,16 @@ au BufRead,BufNewFile {*.liquid}    set ft=liquid
 " Default color scheme
 color slate
 set t_Co=256
+" hard to see the slate Search highlighted words
+highlight Search ctermfg=Black ctermbg=Yellow cterm=NONE
 
 " Edit a file in the directory of the file currently being edited
 map ,e :e <C-R>=expand("%:p:h") . "/"<CR>
-
 map ,, <C-^>
-
 map <C-c> <ESC>
+
+" Run rspec test on the currently edited file
+map ,r :!bundle exec rspec %<CR>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
