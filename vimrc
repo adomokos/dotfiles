@@ -52,7 +52,7 @@ map ,, <C-^>
 map <C-c> <ESC>
 
 " Run rspec test on the currently edited file
-map ,r :!bundle exec rspec %<CR>
+map ,r :!rspec %<CR>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
