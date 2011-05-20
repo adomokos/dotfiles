@@ -53,16 +53,12 @@ map <C-c> <ESC>
 
 " Run rspec test on the currently edited file
 map ,r :!rspec %<CR>
+map ,d :!rspec % -fd<CR>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
-
-" ctags settings
-"let Tlist_Ctags_Cmd = "/usr/local/Cellar/ctags/5.8/bin"
-"let Tlist_WinWidth = 50
-"map <F4> :TlistToggle<cr>
 
 " set commentstrings
 if !exists("autocmmands_loaded")
@@ -72,3 +68,6 @@ endif
 
 " pathogen configuration
 call pathogen#runtime_append_all_bundles()
+
+" regenerate tags for ctags
+map <Leader>rt :!/usr/local/Cellar/ctags/5.8/bin/ctags --extra=+f -R *<CR>
