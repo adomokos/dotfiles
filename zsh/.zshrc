@@ -24,11 +24,10 @@ alias ll='/bin/ls -Gla'
 alias gsp='git stash pop'
 alias gf='git fetch'
 alias w3='cd ~/Sites/within3/big_red'
-alias br='cd ~/Sites/within3/br_forked'
 alias gorails='cd ~/Programming/Rails'
 alias goruby='cd ~/Programming/Ruby'
 alias bctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
-alias rsu='rspec spec/units'
+alias rsu='time rspec spec/units'
 
 ###### Directory Shortcuts
 
@@ -95,7 +94,7 @@ vack () {
 }
 
 runcuke() {
-  cucumber features/acceptance -t $1
+  time cucumber features/acceptance -t $1
 }
 
 zle -N backward-kill-partial-word
