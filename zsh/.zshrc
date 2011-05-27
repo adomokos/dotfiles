@@ -12,11 +12,14 @@ setopt prompt_subst     # enable var expansion in prompt
 setopt complete_in_word # when completing, keep cursor inline
 setopt always_to_end    # move cursor to end of word if match inserted
 
+source ~/.zsh/title.zsh
+
 # Force it into vi mode
 set -o vi
 
 ###### Aliases
 
+alias vim='/Applications/MacVim/mvim -v'
 alias ll='/bin/ls -Gla'
 alias gsp='git stash pop'
 alias gf='git fetch'
@@ -25,6 +28,7 @@ alias br='cd ~/Sites/within3/br_forked'
 alias gorails='cd ~/Programming/Rails'
 alias goruby='cd ~/Programming/Ruby'
 alias bctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+alias rsu='rspec spec/units'
 
 ###### Directory Shortcuts
 
@@ -40,7 +44,7 @@ pless() {
 }
 
 e() {
-  $EDITOR $*
+  vim $*
 }
 
 reload() {
@@ -90,6 +94,10 @@ vack () {
   vim $(ack -g $@)
 }
 
+runcuke() {
+  cucumber features/acceptance -t $1
+}
+
 zle -N backward-kill-partial-word
 bindkey '^Xw' backward-kill-partial-word
 
@@ -107,5 +115,4 @@ promptinit
 prompt jaf
 
 ###### rvm
-
 if [[ -s /Users/adomokos/.rvm/scripts/rvm ]] ; then source /Users/adomokos/.rvm/scripts/rvm ; fi
