@@ -52,8 +52,8 @@ map ,, <C-^>
 map <C-c> <ESC>
 
 " Run rspec test on the currently edited file
-map ,r :!rspec %<CR>
-map ,d :!rspec % -fd<CR>
+map ,r :!time rspec %<CR>
+map ,d :!time rspec % -fd<CR>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
@@ -71,3 +71,13 @@ call pathogen#runtime_append_all_bundles()
 
 " regenerate tags for ctags
 map <Leader>rt :!/usr/local/Cellar/ctags/5.8/bin/ctags --extra=+f -R *<CR>
+
+" Edit of view files in same directory as current file
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+map <Leader>e :edit %%
+map <Leader>v :view %%
+
+" Open files with <leader>f
+map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
+" Open files, limited to the directory of the current file, with <leader>gf
+map <Leader>gf :CommandTFlush<CR>\|:CommandT %%<CR>
