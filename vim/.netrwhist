@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/adomokos/Programming/Rails/codereview_prototype/app/assets/stylesheets'
+let g:netrw_dirhist_2='/Users/adomokos/Programming/Rails/codereview_prototype/app/assets/images'
+let g:netrw_dirhist_3='/Users/adomokos/Programming/Rails/codereview_prototype/app/views/github_hook'
+let g:netrw_dirhist_4='/Users/adomokos/Sites/within3/big_red/cdk/product_templates/advisory_board/templates'
+let g:netrw_dirhist_5='/Users/adomokos/Sites/within3/big_red/cdk/product_templates/advisory_board/javascripts'
+let g:netrw_dirhist_6='/Users/adomokos/Sites/within3/big_red/features/acceptance/ad_board/home_page'
+let g:netrw_dirhist_7='/Users/adomokos/Sites/within3/big_red/features/acceptance/ad_board'
+let g:netrw_dirhist_8='/Users/adomokos/Sites/within3/big_red/cdk/communities/ad_board_cdk_1'
+let g:netrw_dirhist_9='/Users/adomokos/Sites/within3/big_red/cdk/communities/ad_board_cdk_1/stylesheets'
