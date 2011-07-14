@@ -1,10 +1,14 @@
 set nocompatible
 
+" pathogen configuration
+call pathogen#runtime_append_all_bundles()
+
 set nonumber
 set ruler
 set hidden
 syntax on
-filetype plugin on
+filetype plugin indent on
+
 set visualbell " no beeping, thx
 set autoindent
 
@@ -66,8 +70,6 @@ if !exists("autocmmands_loaded")
   autocmd FileType ruby set commentstring=#%s
 endif
 
-" pathogen configuration
-call pathogen#runtime_append_all_bundles()
 
 " regenerate tags for ctags
 map <Leader>rt :!/usr/local/Cellar/ctags/5.8/bin/ctags --extra=+f -R *<CR>
