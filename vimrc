@@ -45,8 +45,15 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 au BufRead,BufNewFile {*.liquid}    set ft=liquid
 
 " Default color scheme
-color slate
+syntax enable
 set t_Co=256
+color slate
+
+" To set the color with solarized
+"set background=dark
+"let g:solarized_termcolors=256
+"colorscheme solarized
+
 " hard to see the slate Search highlighted words
 highlight Search ctermfg=Black ctermbg=Yellow cterm=NONE
 
