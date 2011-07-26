@@ -38,6 +38,10 @@ vendor=~/Code/Vendor
 
 ###### Functions
 
+cdk_api() {
+  rspec -t cdk_api -fd spec/units/cdk/$1
+}
+
 pless() {
   pygmentize $1 | less -r
 }
