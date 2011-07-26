@@ -77,7 +77,6 @@ if !exists("autocmmands_loaded")
   autocmd FileType ruby set commentstring=#%s
 endif
 
-
 " regenerate tags for ctags
 map <Leader>rt :!/usr/local/Cellar/ctags/5.8/bin/ctags --extra=+f -R *<CR>
 
