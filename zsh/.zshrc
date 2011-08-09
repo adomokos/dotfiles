@@ -18,16 +18,7 @@ source ~/.zsh/title.zsh
 set -o vi
 
 ###### Aliases
-
-alias vim='/Applications/MacVim/mvim -v'
-alias ll='/bin/ls -Gla'
-alias gsp='git stash pop'
-alias gf='git fetch'
-alias w3='cd ~/Sites/within3/big_red'
-alias gorails='cd ~/Programming/Rails'
-alias goruby='cd ~/Programming/Ruby'
-alias bctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
-alias rsu='time rspec spec/units'
+source ~/.zsh/.zsh_aliases
 
 ###### Directory Shortcuts
 
