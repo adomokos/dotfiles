@@ -15,7 +15,7 @@ setopt always_to_end    # move cursor to end of word if match inserted
 source ~/.zsh/title.zsh
 
 # Force it into vi mode
-set -o vi
+set -o emacs
 
 ###### Aliases
 source ~/.zsh/.zsh_aliases
@@ -89,7 +89,7 @@ vack () {
 }
 
 runcuke() {
-  time cucumber features/acceptance -t $1
+  time cucumber acceptance -t $1
 }
 
 zle -N backward-kill-partial-word

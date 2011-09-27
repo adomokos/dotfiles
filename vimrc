@@ -63,8 +63,8 @@ map ,, <C-^>
 map <C-c> <ESC>
 
 " Run rspec test on the currently edited file
-map ,r :!time rspec %<CR>
-map ,d :!time rspec % -fd<CR>
+map ,r :!time rspec % --color<CR>
+map ,d :!time rspec % -fd --color<CR>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
