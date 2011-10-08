@@ -8,3 +8,6 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export WORDCHARS="${WORDCHARS:s#/#}"
 # For clojure
 export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
+
+# Add rbenv to the PATH
+export PATH="$HOME/.rbenv/bin/:$PATH"

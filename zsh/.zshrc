@@ -21,14 +21,12 @@ set -o emacs
 source ~/.zsh/.zsh_aliases
 
 ###### Directory Shortcuts
-
 big_red=~/Sites/within3/big_red
 w3public=~/Sites/within3_public
 code=~/Code/Active
 vendor=~/Code/Vendor
 
 ###### Functions
-
 cdk_api() {
   rspec -t cdk_api -fd spec/units/cdk/$1
 }
@@ -110,3 +108,6 @@ prompt jaf
 
 ###### rvm
 if [[ -s /Users/adomokos/.rvm/scripts/rvm ]] ; then source /Users/adomokos/.rvm/scripts/rvm ; fi
+
+###### .rbenv
+eval "$(rbenv init -)"
