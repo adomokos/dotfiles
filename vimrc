@@ -114,7 +114,7 @@ function! FindSpec()
   let l:spec_file_path = join(l:split_path, "/")
 
   echo l:spec_file_path
-  execute ":e /".l:spec_file_path
+  execute ":vsplit /".l:spec_file_path
 endfunction
 
 nmap ,a :call FindSpec()<CR>
