@@ -15,3 +15,5 @@
 	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
 	keepBackup = false
 	trustExitCode = false
+[mergetool]
+	keepBackup = false
