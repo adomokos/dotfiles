@@ -78,7 +78,8 @@ if !exists("autocmmands_loaded")
 endif
 
 " regenerate tags for ctags
-map <Leader>rt :!/usr/local/Cellar/ctags/5.8/bin/ctags --extra=+f -R *<CR>
+" collided with VimClojure, but I don't use this that often
+" map <Leader>rt :!/usr/local/Cellar/ctags/5.8/bin/ctags --extra=+f -R *<CR>
 
 " Edit of view files in same directory as current file
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
@@ -89,6 +90,10 @@ map <Leader>v :view %%
 map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
 " Open files, limited to the directory of the current file, with <leader>gf
 map <Leader>gf :CommandTFlush<CR>\|:CommandT %%<CR>
+
+" for VimClojure
+let g:vimclojure#HighlightBuiltins = 1
+let g:vimclojure#ParenRainbow = 1
 
 function! FindSpec()
   let l:cwd=getcwd()
