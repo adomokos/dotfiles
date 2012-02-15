@@ -107,4 +107,7 @@ promptinit
 prompt jaf
 
 ###### rvm
-if [[ -s /Users/adomokos/.rvm/scripts/rvm ]] ; then source /Users/adomokos/.rvm/scripts/rvm ; fi
+# if [[ -s /Users/adomokos/.rvm/scripts/rvm ]] ; then source /Users/adomokos/.rvm/scripts/rvm ; fi
+
+# Adding for rbenv, enable shims and autocompletion
+eval "$(rbenv init -)"
