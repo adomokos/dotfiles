@@ -1,4 +1,4 @@
-alias vim='/Applications/MacVim/mvim -v'
+alias vim='mvim -v'
 alias ll='/bin/ls -Gla'
 alias gsp='git stash pop'
 alias gf='git fetch'
