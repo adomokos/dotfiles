@@ -8,6 +8,8 @@ export EDITOR=vim
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export WORDCHARS="${WORDCHARS:s#/#}"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home"
+export MULE_SERVER_ID=dev
 # For clojure
 # export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 # For node
