@@ -1,6 +1,6 @@
 fpath=($fpath $HOME/.zsh/func)
 export fpath
-export PATH="/Users/adomokos/.gem/ruby/1.8/bin:/Users/adomokos/bin:/usr/local/git/bin:/usr/local/mongodb/bin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/Users/adomokos/.gem/ruby/1.8/bin:/Users/adomokos/bin:/usr/local/git/bin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 # Adding rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PAGER="less"
