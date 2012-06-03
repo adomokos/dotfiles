@@ -21,16 +21,10 @@ set -o emacs
 source ~/.zsh/.zsh_aliases
 
 ###### Directory Shortcuts
-big_red=~/Sites/within3/big_red
-w3public=~/Sites/within3_public
 code=~/Code/Active
 vendor=~/Code/Vendor
 
 ###### Functions
-cdk_api() {
-  rspec -t cdk_api -fd spec/units/cdk/$1
-}
-
 pless() {
   pygmentize $1 | less -r
 }
@@ -46,11 +40,6 @@ reload() {
 
 vpn() {
   osascript ~/bin/vpn_connector.scpt
-}
-
-rvmpass() {
-  rvm $1 --passenger
-  sudo apachectl restart
 }
 
 gh() {
@@ -87,7 +76,7 @@ vack () {
 }
 
 runcuke() {
-  time cucumber acceptance -t $1
+  time cucumber features -t $1
 }
 
 zle -N backward-kill-partial-word
