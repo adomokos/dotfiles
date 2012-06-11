@@ -6,13 +6,15 @@ alias gsp='git stash pop'
 alias gf='git fetch'
 
 # ruby aliases
-alias rsu='time bin/spec spec_no_rails'
+alias rsu='time bin/rspec spec'
 alias be='bundle exec'
 alias bi='bundle install --path vendor/bundle --binstubs'
 alias rake='bin/rake'
 alias ss='bundle exec script/server'
 alias sc='bundle exec script/console'
 alias bi='bundle install --path vendor/bundle --binstubs'
+alias rtest='export RAILS_ENV=test'
+alias rdev='export RAILS_ENV=development'
 
 # dir jumpers
 alias dde='cd ~/DDI/Projects/ecommerce'
@@ -26,3 +28,6 @@ alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias stoppg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias restartpg='stoppg && startpg'
 alias startmongo='mongod run --config /usr/local/etc/mongod.conf'
+
+# other
+alias tt='node ~/Programming/Javascript/node_stuff/terminal-twitter/terminal-twitter.js'
