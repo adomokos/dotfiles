@@ -79,6 +79,12 @@ runcuke() {
   time cucumber features -t $1
 }
 
+kill_it() {
+  for X in `ps acx | grep -i $1 | awk {'print $1'}`; do
+    kill -9 $X;
+  done
+}
+
 zle -N backward-kill-partial-word
 bindkey '^Xw' backward-kill-partial-word
 
