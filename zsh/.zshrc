@@ -46,13 +46,8 @@ gh() {
   rvm 1.8.7 && github $* && rvm 1.9.1
 }
 
-dump_yamls() {
-  if [ -d $FILE ]; then
-  else
-    FILE=db/development
-  fi
-
-  FILE=$FILE TABLES=$1 rake w3:db:dump
+dd() {
+  cd ~/DDI/Projects/$1
 }
 
 whodoneit() {
