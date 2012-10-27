@@ -6,6 +6,7 @@ call pathogen#runtime_append_all_bundles()
 set nonumber
 set ruler
 set hidden
+set history=200
 syntax on
 filetype plugin indent on
 
@@ -88,8 +89,8 @@ map <Leader>v :view %%
 
 " Open files with <leader>f
 map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
-" Open files, limited to the directory of the current file, with <leader>gf
-map <Leader>gf :CommandTFlush<CR>\|:CommandT %%<CR>
+" Open files, limited to the directory of the current file, with <leader>cf
+map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
 
 " for VimClojure
 let g:vimclojure#HighlightBuiltins = 1
