@@ -58,5 +58,3 @@ function! FindSpec()
 
   echo "Sorry, I don't know what to do"
 endfunction
-
-nmap ,a :call FindSpec()<CR>
