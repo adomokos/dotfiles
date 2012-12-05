@@ -95,32 +95,3 @@ map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
 " for VimClojure
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
-
-"function! FindSpec()
-  "let l:cwd=getcwd()
-  "let l:file_path=expand("%:p")
-  "let l:split_path=split(l:file_path, "/")
-
-  "let l:big_red_index = index(l:split_path, "big_red")
-
-  "if l:big_red_index == -1
-    "echo "No big_red folder was found"
-    "return
-  "endif
-
-  "" Inject the spec/units folders after big_red
-  "call insert(l:split_path, "spec/units", l:big_red_index+1)
-
-  "let l:file_name = l:split_path[len(l:split_path)-1]
-  "let l:spec_file_name = strpart(l:file_name, 0, strlen(l:file_name)-3)."_spec.rb"
-
-  ""replace the file name with the spec file name
-  "let l:split_path[len(l:split_path)-1] = l:spec_file_name
-
-  "let l:spec_file_path = join(l:split_path, "/")
-
-  "echo l:spec_file_path
-  "execute ":vsplit /".l:spec_file_path
-"endfunction
-
-"nmap ,a :call FindSpec()<CR>
