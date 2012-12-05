@@ -38,14 +38,25 @@ function! FindSpec()
     return
   endif
 
-  let l:spec_file_path = FindWith(split(l:file_path, "/"), l:project_name, "spec_no_rails")
+  let l:spec_no_rails_file_path = FindWith(split(l:file_path, "/"), l:project_name, "spec_no_rails")
   "echo l:spec_file_path
-  if filereadable(l:spec_file_path)
-    execute ":vsplit ".l:spec_file_path
+  if filereadable(l:spec_no_rails_file_path)
+    execute ":vsplit ".l:spec_no_rails_file_path
     return
   endif
 
-  echo "Spec file was not found in spec and spec_no_rails dirs"
+  " This will create the file in the buffer,
+  " but won't work properly when I am working on a gem
+  " I still need to check if it's a Rails project
+  if index(l:split_file_path, "lib") == -1
+    execute ":vsplit ".l:spec_file_path
+    return
+  else
+    execute ":vsplit ".l:spec_no_rails_file_path
+    return
+  endif
+
+  echo "Sorry, I don't know what to do"
 endfunction
 
 nmap ,a :call FindSpec()<CR>
