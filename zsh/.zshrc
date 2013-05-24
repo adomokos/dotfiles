@@ -46,8 +46,8 @@ gh() {
   rvm 1.8.7 && github $* && rvm 1.9.1
 }
 
-dd() {
-  cd ~/DDI/Projects/$1
+hi() {
+  cd ~/Hireology/Projects/$1
 }
 
 whodoneit() {
