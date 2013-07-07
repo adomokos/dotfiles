@@ -47,7 +47,7 @@ gh() {
 }
 
 hi() {
-  cd ~/Hireology/Projects/$1
+  cd ~/Projects/Hireology/Code/$1
 }
 
 whodoneit() {
