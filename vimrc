@@ -96,5 +96,8 @@ map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
 
+" Disable folding for vim markdown
+let g:vim_markdown_folding_disabled=1
+
 " hook in FindSpec
 nmap ,a :call FindSpec()<CR>
