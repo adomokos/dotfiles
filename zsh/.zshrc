@@ -74,6 +74,10 @@ runcuke() {
   time cucumber features -t $1
 }
 
+mkcd() {
+  mkdir -p "$@" && cd "$_";
+}
+
 kill_it() {
   for X in `ps acx | grep -i $1 | awk {'print $1'}`; do
     kill -9 $X;
