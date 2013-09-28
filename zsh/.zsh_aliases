@@ -11,13 +11,13 @@ alias rsu='time bin/rspec spec'
 alias rsn='time bin/rspec spec_no_rails'
 alias be='bundle exec'
 alias bi='bundle install --path vendor/bundle --binstubs'
-alias ss='bundle exec script/server'
-alias sc='bundle exec script/console'
+alias rs='script/rails s'
+alias rc='script/rails c'
 alias bi='bundle install --path vendor/bundle --binstubs'
 alias rtest='export RAILS_ENV=test'
 alias rdev='export RAILS_ENV=development'
-alias rs='bin/rails s'
-alias rc='bin/rails c'
+#alias rs='bin/rails s'
+#alias rc='bin/rails c'
 alias rspec='time bin/rspec'
 
 # dir jumpers
@@ -32,6 +32,9 @@ alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias stoppg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias restartpg='stoppg && startpg'
 alias startmongo='mongod run --config /usr/local/etc/mongod.conf'
+alias startredis='redis-server /usr/local/etc/redis.conf'
+alias startmysql='mysql.server start'
+alias stopmysql='mysql.server stop'
 
 # other
 alias tt='node ~/Programming/Javascript/node_stuff/terminal-twitter/terminal-twitter.js'
