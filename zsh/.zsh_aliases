@@ -38,3 +38,4 @@ alias stopmysql='mysql.server stop'
 
 # other
 alias tt='node ~/Programming/Javascript/node_stuff/terminal-twitter/terminal-twitter.js'
+alias build-tunnel='ssh -D 8080 -C -N adomokos@build0'
