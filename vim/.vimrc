@@ -88,9 +88,16 @@ map <Leader>e :edit %%
 map <Leader>v :view %%
 
 " Open files with <leader>f
-map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
+" map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
 " Open files, limited to the directory of the current file, with <leader>cf
-map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
+" map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
+
+" Settings for ctrlp - a replacement for CommandT
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" Use the current dir for working path if nothing defined
+let g:ctrlp_working_path_mode = 'ra'
 
 " for VimClojure
 let g:vimclojure#HighlightBuiltins = 1
