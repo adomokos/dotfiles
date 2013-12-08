@@ -13,7 +13,7 @@ export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export WORDCHARS="${WORDCHARS:s#/#}"
 
 # For DDI Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
 export MULE_SERVER_ID=dev
 
 # For clojure
