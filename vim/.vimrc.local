@@ -20,5 +20,3 @@ function! FindSpec()
   echo l:spec_file_path
   execute ":vsplit /".l:spec_file_path
 endfunction
-
-nmap ,a :call FindSpec()<CR>
