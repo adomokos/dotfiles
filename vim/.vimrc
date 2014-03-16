@@ -68,8 +68,8 @@ map ,r :!time bin/rspec % --color<CR>
 map ,d :!time bin/rspec % -fd --color<CR>
 
 " Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(expand("~/.vimrc.scripts"))
+  source ~/.vimrc.scripts
 endif
 
 " set commentstrings
