@@ -98,6 +98,9 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " Use the current dir for working path if nothing defined
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+      \ 'dir': '\v[\/]\.(git|hg|svn)|vendor$'
+      \ }
 
 " for VimClojure
 let g:vimclojure#HighlightBuiltins = 1
