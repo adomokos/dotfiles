@@ -26,7 +26,7 @@ vendor=~/Code/Vendor
 
 ###### Functions
 pless() {
-  pygmentize $1 | less -r
+  bin/pygmentize $1 | less -r
 }
 
 e() {
@@ -57,7 +57,7 @@ whodoneit() {
 }
 
 color-my-code() {
-  pygmentize -f rtf -O style=colorful $1 | pbcopy
+  bin/pygmentize -f rtf -O style=colorful $1 | pbcopy
 }
 
 # make meta+bksp kill path components
