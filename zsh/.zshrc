@@ -50,6 +50,10 @@ hi() {
   cd ~/Projects/Hireology/Code/$1
 }
 
+gsa() {
+  git stash apply stash@{$1}
+}
+
 whodoneit() {
   for x in $(git grep --name-only $1); do
     git blame -f -- $x | grep $1;
@@ -105,3 +109,10 @@ eval "$(rbenv init -)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Enabling Haskell
+# Add GHC 7.8.3 to the PATH, via http://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
