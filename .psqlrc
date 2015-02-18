@@ -1,0 +1,21 @@
+/* From: http://www.manniwood.com/postgresql_stuff/index.html */
+
+\echo `date  +"%Y-%m-%d %H:%M:%S"`
+\encoding SQL_ASCII
+\set AUTOCOMMIT off
+\set VERBOSITY verbose
+\set PROMPT1 '%n@%m:%>/%/%x%# '
+\set IGNOREEOF 5
+\pset null '<<NULL>>'
+\pset linestyle unicode
+
+/*
+Don't use these settings for now
+\pset border 1
+\pset pager on
+\pset format wrapped
+*/
+
+\timing
+set application_name to adomokosmba; commit;
+set bytea_output to escape; commit;
