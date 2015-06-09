@@ -8,6 +8,7 @@
 	ci = commit
 	co = checkout
 	br = branch
+  ls-subtrees = !"git log | grep git-subtree-dir | tr -d ' ' | cut -d ':' -f2 | sort | uniq"
 [merge]
 	summary = true
 	tool = p4
