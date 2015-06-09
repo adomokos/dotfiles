@@ -6,6 +6,7 @@ alias lltree="ls -R | grep ":" | sed -e 's/://' -e 's/[^-][^\/]*\//--/g' -e 's/^
 alias gsp='git stash pop'
 alias gf='git fetch'
 alias grh='git reset --hard'
+alias gst="git log | grep git-subtree-dir | tr -d '' | cut -d "":"" -f2 | sort | uniq"
 
 # ruby aliases
 alias rsu='time bin/rspec spec'
@@ -19,12 +20,11 @@ alias rc='bin/rails c'
 alias rspec='time bin/rspec'
 
 # dir jumpers
-alias dde='cd ~/DDI/Projects/ecommerce'
 alias gorails='cd ~/Programming/Rails'
 alias goruby='cd ~/Programming/Ruby'
 alias gojs='cd ~/Programming/JavaScript'
 
-alias ctags="ctags -R --languages=ruby --exclude=.git --exclude=log"
+alias xctags="ctags -R --languages=ruby --exclude=.git --exclude=log"
 alias h='history -100 -1'
 alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias stoppg='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
