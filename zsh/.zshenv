@@ -12,11 +12,10 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export WORDCHARS="${WORDCHARS:s#/#}"
 
-# For DDI Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home"
-export MULE_SERVER_ID=dev
-
 # For clojure
 # export CLASSPATH=$CLASSPATH:/usr/local/Cellar/clojure-contrib/1.2.0/clojure-contrib.jar
 # For node
 # export NODE_PATH="/usr/local/lib/node_modules"
+
+# For Elixir
+export PATH="/usr/local/Cellar/elixir/1.0.4/bin:$PATH"
