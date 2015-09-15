@@ -17,7 +17,7 @@ alias rtest='export RAILS_ENV=test'
 alias rdev='export RAILS_ENV=development'
 alias rs='bin/rails s --binding 127.0.0.1'
 alias rc='bin/rails c'
-alias rspec='time bin/rspec'
+# alias rspec='time bin/rspec'
 
 # dir jumpers
 alias gorails='cd ~/Programming/Rails'

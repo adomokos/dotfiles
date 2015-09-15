@@ -19,3 +19,6 @@ export WORDCHARS="${WORDCHARS:s#/#}"
 
 # For Elixir
 export PATH="/usr/local/Cellar/elixir/1.0.4/bin:$PATH"
+
+# For pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
