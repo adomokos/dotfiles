@@ -46,9 +46,9 @@ gh() {
   rvm 1.8.7 && github $* && rvm 1.9.1
 }
 
-hi() {
-  cd ~/Projects/Hireology/Code/$1
-}
+#hi() {
+  #cd ~/Projects/Hireology/Code/$1
+#}
 
 gsa() {
   git stash apply stash@{$1}
