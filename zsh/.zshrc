@@ -118,4 +118,4 @@ if [ -d "$GHC_DOT_APP" ]; then
 fi
 
 # Adding for pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
