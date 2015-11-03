@@ -4,6 +4,7 @@ export PATH="/Users/adomokos/bin:/usr/local/git/bin:/usr/local/bin:/usr/local/sb
 
 # Adding rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
 # Adding global npm executables
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PAGER="less"
