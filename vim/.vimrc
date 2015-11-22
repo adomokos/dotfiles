@@ -109,5 +109,8 @@ let g:vimclojure#ParenRainbow = 1
 " Disable folding for vim markdown
 let g:vim_markdown_folding_disabled=1
 
+" Add bufferline to vim-airline
+let g:airline_section_y = 'BN: %{bufnr("%")}'
+
 " hook in FindSpec
 nmap ,a :call FindSpec()<CR>
