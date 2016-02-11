@@ -3,9 +3,6 @@ function! FindSpec()
   let l:file_path=expand("%:p")
   let l:split_path=split(l:file_path, "/")
 
-  " For this gem, we don't need lib/dd-core, remove them
-  call remove(l:split_path, l:project_index+1, l:project_index+2)
-
   " Inject the spec dir
   call insert(l:split_path, "spec", l:project_index+1)
 
