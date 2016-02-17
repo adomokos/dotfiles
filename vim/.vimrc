@@ -3,7 +3,10 @@ set nocompatible
 " pathogen configuration
 call pathogen#runtime_append_all_bundles()
 
-set nonumber
+" set nonumber
+set relativenumber
+set number
+
 set ruler
 set hidden
 set history=200
@@ -50,10 +53,10 @@ syntax enable
 set t_Co=256
 color slate
 
-" To set the color with solarized
-"set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
+" NERDCommenter
+let NERDDefaultNesting = 0
+let NERDRemoveExtraSpaces = 1
+let NERDSpaceDelims = 1
 
 " hard to see the slate Search highlighted words
 highlight Search ctermfg=Black ctermbg=Yellow cterm=NONE
