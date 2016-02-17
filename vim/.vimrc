@@ -52,6 +52,8 @@ au BufRead,BufNewFile {*.liquid}    set ft=liquid
 syntax enable
 set t_Co=256
 color slate
+" Color the line number
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 " NERDCommenter
 let NERDDefaultNesting = 0
