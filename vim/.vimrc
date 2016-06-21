@@ -55,6 +55,19 @@ color slate
 " Color the line number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
+" Change cursor style when entering INSERT mode (works in tmux!)
+" This is cute, but might not work properly on OSX :-(, getting
+" weird errors when system editor is invoked
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 " NERDCommenter
 let NERDDefaultNesting = 0
 let NERDRemoveExtraSpaces = 1
@@ -71,6 +84,7 @@ map <C-c> <ESC>
 " Run rspec test on the currently edited file
 map ,r :!time bin/rspec % --color<CR>
 map ,d :!time bin/rspec % -fd --color<CR>
+map ,t :execute "!time bundle exec rspec %:" . line(".")<cr>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.scripts"))
