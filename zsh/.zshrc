@@ -38,6 +38,10 @@ reload() {
   source ~/.zshrc
 }
 
+make-init() {
+  curl https://gist.githubusercontent.com/adomokos/2fd95840d59b19bbb3f4/raw/7b548cd3fda0dab958ecb0e0955fbadc1af6ef6e/Makefile > Makefile
+}
+
 vpn() {
   osascript ~/bin/vpn_connector.scpt
 }
@@ -61,7 +65,7 @@ whodoneit() {
 }
 
 color-my-code() {
-  bin/pygmentize -f rtf -O style=colorful $1 | pbcopy
+  bundle exec pygmentize -f rtf -O style=colorful $1 | pbcopy
 }
 
 # make meta+bksp kill path components
