@@ -77,14 +77,14 @@ let NERDSpaceDelims = 1
 highlight Search ctermfg=Black ctermbg=Yellow cterm=NONE
 
 " Edit a file in the directory of the file currently being edited
-map ,e :e <C-R>=expand("%:p:h") . "/"<CR>
-map ,, <C-^>
-map <C-c> <ESC>
+nmap ,e :e <C-R>=expand("%:p:h") . "/"<CR>
+nmap ,, <C-^>
+nmap <C-c> <ESC>
 
 " Run rspec test on the currently edited file
-map ,r :!time bin/rspec % --color<CR>
-map ,d :!time bin/rspec % -fd --color<CR>
-map ,t :execute "!time bundle exec rspec %:" . line(".")<cr>
+nmap ,r :!time bin/rspec % --color<CR>
+nmap ,d :!time bin/rspec % -fd --color<CR>
+nmap ,t :execute "!time bundle exec rspec %:" . line(".")<cr>
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.scripts"))
@@ -103,8 +103,8 @@ endif
 
 " Edit of view files in same directory as current file
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
-map <Leader>e :edit %%
-map <Leader>v :view %%
+nmap <Leader>e :edit %%
+nmap <Leader>v :view %%
 
 " Open files with <leader>f
 " map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
