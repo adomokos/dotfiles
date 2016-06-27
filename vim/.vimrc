@@ -1,9 +1,31 @@
 set nocompatible
+filetype off
 
-" pathogen configuration
-call pathogen#runtime_append_all_bundles()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" set nonumber
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fireplace'
+Plugin 'ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+" vim-airline is just not working without this
+set laststatus=2
+
 set relativenumber
 set number
 
@@ -11,7 +33,6 @@ set ruler
 set hidden
 set history=200
 syntax on
-filetype plugin indent on
 
 set visualbell " no beeping, thx
 set autoindent
@@ -38,9 +59,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Status bar
-set laststatus=2
-
 " Make sure vim can read shell settings (sourced in ~/.profile)
 set shell=/bin/sh
 
@@ -52,22 +70,23 @@ au BufRead,BufNewFile {*.liquid}    set ft=liquid
 syntax enable
 set t_Co=256
 color slate
+
 " Color the line number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
-" Change cursor style when entering INSERT mode (works in tmux!)
-" This is cute, but might not work properly on OSX :-(, getting
-" weird errors when system editor is invoked
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
-
+"##" Change cursor style when entering INSERT mode (works in tmux!)
+"##" This is cute, but might not work properly on OSX :-(, getting
+"##" weird errors when system editor is invoked
+"##if exists('$TMUX')
+"##  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+"##  let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+"##  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+"##else
+"##  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"##  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+"##  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"##endif
+"##
 " NERDCommenter
 let NERDDefaultNesting = 0
 let NERDRemoveExtraSpaces = 1
@@ -81,20 +100,9 @@ nmap ,e :e <C-R>=expand("%:p:h") . "/"<CR>
 nmap ,, <C-^>
 nmap <C-c> <ESC>
 
-" Run rspec test on the currently edited file
-nmap ,r :!time bin/rspec % --color<CR>
-nmap ,d :!time bin/rspec % -fd --color<CR>
-nmap ,t :execute "!time bundle exec rspec %:" . line(".")<cr>
-
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.scripts"))
   source ~/.vimrc.scripts
-endif
-
-" set commentstrings
-if !exists("autocmmands_loaded")
-  let autocommands_loaded = 1
-  autocmd FileType ruby set commentstring=#%s
 endif
 
 " regenerate tags for ctags
@@ -107,11 +115,11 @@ nmap <Leader>e :edit %%
 nmap <Leader>v :view %%
 
 " Open files with <leader>f
-" map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
+ map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
 " Open files, limited to the directory of the current file, with <leader>cf
-" map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
+map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
 
-" Settings for ctrlp - a replacement for CommandT
+" CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -119,17 +127,24 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
       \ 'dir': '\v[\/]\.(git|hg|svn)|vendor$'
-      \ }
+    \ }
+" Don't enable ctrlp for filename only
+" let g:ctrlp_by_filename = 1
+let g:ctrlp_max_files = 600
+let g:ctrlp_max_depth = 5
 
-" for VimClojure
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
-
-" Disable folding for vim markdown
-let g:vim_markdown_folding_disabled=1
-
+"##" for VimClojure
+"##let g:vimclojure#HighlightBuiltins = 1
+"##let g:vimclojure#ParenRainbow = 1
+"##
+"##" Disable folding for vim markdown
+"##let g:vim_markdown_folding_disabled=1
+"##
 " Add bufferline to vim-airline
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 
-" hook in FindSpec
-nmap ,a :call FindSpec()<CR>
+if !exists("autocmmands_loaded")
+  let autocommands_loaded = 1
+  au Filetype clojure source ~/.vim/scripts/clojure.vim
+  au Filetype ruby source ~/.vim/scripts/ruby.vim
+endif
