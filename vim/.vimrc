@@ -86,7 +86,7 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 "##  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 "##  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "##endif
-"##
+
 " NERDCommenter
 let NERDDefaultNesting = 0
 let NERDRemoveExtraSpaces = 1
@@ -136,10 +136,10 @@ let g:ctrlp_max_depth = 5
 "##" for VimClojure
 "##let g:vimclojure#HighlightBuiltins = 1
 "##let g:vimclojure#ParenRainbow = 1
-"##
+
 "##" Disable folding for vim markdown
 "##let g:vim_markdown_folding_disabled=1
-"##
+
 " Add bufferline to vim-airline
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 
