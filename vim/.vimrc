@@ -100,20 +100,9 @@ nmap ,e :e <C-R>=expand("%:p:h") . "/"<CR>
 nmap ,, <C-^>
 nmap <C-c> <ESC>
 
-" Run rspec test on the currently edited file
-nmap ,r :!time bin/rspec % --color<CR>
-nmap ,d :!time bin/rspec % -fd --color<CR>
-nmap ,t :execute "!time bundle exec rspec %:" . line(".")<cr>
-
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.scripts"))
   source ~/.vimrc.scripts
-endif
-
-" set commentstrings
-if !exists("autocmmands_loaded")
-  let autocommands_loaded = 1
-  autocmd FileType ruby set commentstring=#%s
 endif
 
 " regenerate tags for ctags
@@ -154,5 +143,8 @@ let g:ctrlp_max_depth = 5
 " Add bufferline to vim-airline
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 
-" hook in FindSpec
-nmap ,a :call FindSpec()<CR>
+if !exists("autocmmands_loaded")
+  let autocommands_loaded = 1
+  au Filetype clojure source ~/.vim/scripts/clojure.vim
+  au Filetype ruby source ~/.vim/scripts/ruby.vim
+endif
