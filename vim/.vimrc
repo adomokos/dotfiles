@@ -18,6 +18,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fireplace'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'ctrlp.vim'
 
 call vundle#end()
@@ -130,8 +132,8 @@ let g:ctrlp_custom_ignore = {
     \ }
 " Don't enable ctrlp for filename only
 " let g:ctrlp_by_filename = 1
-let g:ctrlp_max_files = 600
-let g:ctrlp_max_depth = 5
+" let g:ctrlp_max_files = 600
+" let g:ctrlp_max_depth = 5
 
 "##" for VimClojure
 "##let g:vimclojure#HighlightBuiltins = 1
