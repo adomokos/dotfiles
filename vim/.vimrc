@@ -15,6 +15,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fireplace'
@@ -24,6 +25,9 @@ Plugin 'ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
+
+" Enable the built-in matchit vim
+" runtime macros/matchit.vim
 
 " vim-airline is just not working without this
 set laststatus=2
@@ -97,6 +101,9 @@ let NERDSpaceDelims = 1
 " hard to see the slate Search highlighted words
 highlight Search ctermfg=Black ctermbg=Yellow cterm=NONE
 
+" <C-l> to clear search result - no need for :noh
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>​
+
 " Edit a file in the directory of the file currently being edited
 nmap ,e :e <C-R>=expand("%:p:h") . "/"<CR>
 nmap ,, <C-^>
@@ -117,7 +124,7 @@ nmap <Leader>e :edit %%
 nmap <Leader>v :view %%
 
 " Open files with <leader>f
- map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
+map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
 " Open files, limited to the directory of the current file, with <leader>cf
 map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
 
@@ -145,4 +152,5 @@ if !exists("autocmmands_loaded")
   let autocommands_loaded = 1
   au Filetype clojure source ~/.vim/scripts/clojure.vim
   au Filetype ruby source ~/.vim/scripts/ruby.vim
+  au Filetype haskell source ~/.vim/scripts/haskell.vim
 endif
