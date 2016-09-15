@@ -153,4 +153,5 @@ if !exists("autocmmands_loaded")
   au Filetype clojure source ~/.vim/scripts/clojure.vim
   au Filetype ruby source ~/.vim/scripts/ruby.vim
   au Filetype haskell source ~/.vim/scripts/haskell.vim
+  au Filetype go source ~/.vim/scripts/go.vim
 endif
