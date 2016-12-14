@@ -21,6 +21,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fireplace'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'fatih/vim-go'
 Plugin 'ctrlp.vim'
 
 call vundle#end()
