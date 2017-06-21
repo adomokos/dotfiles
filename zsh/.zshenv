@@ -5,6 +5,8 @@ export PATH="/Users/adomokos/bin:/usr/local/git/bin:/usr/local/bin:/usr/local/sb
 # Adding rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
+# Adding hpack for Haskell
+export PATH="$HOME/.local/bin:$PATH"
 # Adding global npm executables
 export PATH="/usr/local/share/npm/bin:$PATH"
 export PAGER="less"
@@ -23,3 +25,6 @@ export PATH="/usr/local/Cellar/elixir/1.0.4/bin:$PATH"
 
 # For pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
+
+# For ES
+export ES_HOME=$HOME/Documents/elasticsearch-5.4.1
