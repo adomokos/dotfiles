@@ -28,3 +28,6 @@ export PYENV_ROOT=/usr/local/var/pyenv
 
 # For ES
 export ES_HOME=$HOME/Documents/elasticsearch-5.4.1
+
+# Having GOPATH will make Go(lang) Happy
+export GOPATH=~/Programming/Go/projects/

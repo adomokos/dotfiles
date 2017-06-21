@@ -123,5 +123,3 @@ fi
 
 # Adding for pyenv
 # eval "$(pyenv init -)"
-
-export GOPATH=~/Programming/Go/projects/
