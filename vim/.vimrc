@@ -151,6 +151,9 @@ let g:vim_markdown_folding_disabled=1
 " Add bufferline to vim-airline
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 
+" Modify auto-pair's <M-e> (Alt-e) to <C-e>
+let g:AutoPairsShortcutFastWrap="<C-e>"
+
 if !exists("autocmmands_loaded")
   let autocommands_loaded = 1
   au Filetype clojure source ~/.vim/scripts/clojure.vim
