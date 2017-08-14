@@ -4,5 +4,12 @@ set expandtab      "Always uses spaces instead of tabs
 set softtabstop=4  "Insert 4 spaces when tab is pressed
 set shiftwidth=4   "An indent is 4 spaces
 set shiftround     "Round indent to nearest shiftwidth multiple
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
 nmap ,r :!time runhaskell %<CR>
