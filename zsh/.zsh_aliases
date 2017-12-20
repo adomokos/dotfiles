@@ -6,6 +6,7 @@ alias lltree="ls -R | grep ":" | sed -e 's/://' -e 's/[^-][^\/]*\//--/g' -e 's/^
 alias gsp='git stash pop'
 alias gf='git fetch'
 alias grh='git reset --hard'
+alias gpom='git pull origin master'
 alias gst="git log | grep git-subtree-dir | tr -d '' | cut -d "":"" -f2 | sort | uniq"
 
 # ruby aliases
