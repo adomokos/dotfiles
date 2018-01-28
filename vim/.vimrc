@@ -26,6 +26,7 @@ Plugin 'fatih/vim-go'
 Plugin 'ctrlp.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'itchyny/vim-haskell-indent'
+Plugin 'elixir-editors/vim-elixir'
 
 call vundle#end()
 filetype plugin indent on
@@ -71,6 +72,9 @@ set noswapfile
 
 " Make sure vim can read shell settings (sourced in ~/.profile)
 set shell=/bin/sh
+
+set visualbell t_vb=    " turn off error beep/flash
+set novisualbell        " turn off visual bell
 
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
@@ -158,6 +162,8 @@ let g:AutoPairsShortcutFastWrap="<C-e>"
 if !exists("autocmmands_loaded")
   let autocommands_loaded = 1
   au Filetype clojure source ~/.vim/scripts/clojure.vim
+  " au Filetype elixir source ~/.vim/scripts/elixir.vim - don't need it just
+  " yet
   au Filetype ruby source ~/.vim/scripts/ruby.vim
   au Filetype haskell source ~/.vim/scripts/haskell.vim
   au Filetype go source ~/.vim/scripts/go.vim
