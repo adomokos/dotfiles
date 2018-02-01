@@ -1,4 +1,4 @@
-alias vim='nvim -v'
+alias vim='mvim -v'
 alias ll='/bin/ls -Gla'
 alias lltree="ls -R | grep ":" | sed -e 's/://' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 

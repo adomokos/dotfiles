@@ -30,7 +30,7 @@ pless() {
 }
 
 e() {
-  nvim $*
+  mvim $* -v
 }
 
 reload() {
