@@ -111,9 +111,6 @@ prompt jaf
 # Adding for rbenv, enable shims and autocompletion
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
 # Enabling Haskell
 # Add GHC 7.8.3 to the PATH, via http://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
