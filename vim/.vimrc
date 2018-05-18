@@ -27,6 +27,7 @@ Plugin 'ctrlp.vim'
 Plugin 'neovimhaskell/haskell-vim'
 Plugin 'itchyny/vim-haskell-indent'
 Plugin 'elixir-editors/vim-elixir'
+Plugin 'ElmCast/elm-vim'
 
 call vundle#end()
 filetype plugin indent on
