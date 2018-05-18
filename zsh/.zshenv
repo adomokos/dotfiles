@@ -21,7 +21,7 @@ export WORDCHARS="${WORDCHARS:s#/#}"
 # export NODE_PATH="/usr/local/lib/node_modules"
 
 # For Elixir
-export PATH="/usr/local/Cellar/elixir/1.0.4/bin:$PATH"
+# export PATH="/usr/local/Cellar/elixir/1.0.4/bin:$PATH"
 
 # For pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
@@ -31,3 +31,6 @@ export ES_HOME=$HOME/Documents/elasticsearch-5.4.1
 
 # Having GOPATH will make Go(lang) Happy
 export GOPATH=~/Programming/Go/projects/
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
