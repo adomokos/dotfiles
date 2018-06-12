@@ -50,10 +50,6 @@ gh() {
   rvm 1.8.7 && github $* && rvm 1.9.1
 }
 
-#hi() {
-  #cd ~/Projects/Hireology/Code/$1
-#}
-
 gsa() {
   git stash apply stash@{$1}
 }
@@ -110,13 +106,6 @@ prompt jaf
 
 # Adding for rbenv, enable shims and autocompletion
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
-# Enabling Haskell
-# Add GHC 7.8.3 to the PATH, via http://ghcformacosx.github.io/
-export GHC_DOT_APP="/Applications/ghc-7.8.3.app"
-if [ -d "$GHC_DOT_APP" ]; then
-  export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
-fi
 
 # Adding for pyenv
 # eval "$(pyenv init -)"

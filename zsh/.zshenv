@@ -2,9 +2,6 @@ fpath=($fpath $HOME/.zsh/func)
 export fpath
 export PATH="/Users/adomokos/bin:/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Adding rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
 # Adding hpack for Haskell
 export PATH="$HOME/.local/bin:$PATH"
 # Adding global npm executables
@@ -34,3 +31,4 @@ export GOPATH=~/Programming/Go/projects/
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
