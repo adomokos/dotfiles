@@ -12,4 +12,9 @@ let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
-nmap ,r :!time runhaskell %<CR>
+let g:hindent_on_save = 0
+let g:hindent_indent_size = 4
+let g:hindent_line_length = 100
+let g:force_trailing_newline = 1
+
+nmap ,r :!time stack runhaskell %<CR>

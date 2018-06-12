@@ -25,9 +25,9 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'fatih/vim-go'
 Plugin 'ctrlp.vim'
 Plugin 'neovimhaskell/haskell-vim'
-Plugin 'itchyny/vim-haskell-indent'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'ElmCast/elm-vim'
+Plugin 'alx741/vim-hindent'
 
 call vundle#end()
 filetype plugin indent on
