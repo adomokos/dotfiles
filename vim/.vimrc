@@ -169,3 +169,7 @@ if !exists("autocmmands_loaded")
   au Filetype haskell source ~/.vim/scripts/haskell.vim
   au Filetype go source ~/.vim/scripts/go.vim
 endif
+
+if exists("&wildignorecase")
+  set wildignorecase
+endif
