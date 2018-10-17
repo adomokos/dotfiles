@@ -1,0 +1,8 @@
+:set prompt "\ESC[33m\STXλ> \ESC[m\STX"
+
+:seti -XOverloadedStrings
+:seti -XScopedTypeVariables
+
+:set -Wall
+:set +s
+:set +t
