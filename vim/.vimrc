@@ -28,6 +28,8 @@ Plugin 'neovimhaskell/haskell-vim'
 Plugin 'elixir-editors/vim-elixir'
 Plugin 'ElmCast/elm-vim'
 Plugin 'alx741/vim-hindent'
+Plugin 'neomake/neomake'
+Plugin 'parsonsmatt/intero-neovim'
 
 call vundle#end()
 filetype plugin indent on
@@ -62,6 +64,10 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Load project specific .vimrc
+set exrc
+set secure
+
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc
@@ -80,6 +86,11 @@ set novisualbell        " turn off visual bell
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
 au BufRead,BufNewFile {*.liquid}    set ft=liquid
+
+" Neovim needs this to reload file when changed
+" https://github.com/neovim/neovim/issues/3326
+set autoread
+au FocusGained * :checktime
 
 " Default color scheme
 syntax enable
@@ -173,3 +184,8 @@ endif
 if exists("&wildignorecase")
   set wildignorecase
 endif
+
+map <leader>= :Tabularize /=<CR>
+map <leader>- :Tabularize /-><CR>
+map <leader>, :Tabularize /,<CR>
+map <leader># :Tabularize /#-}<CR>

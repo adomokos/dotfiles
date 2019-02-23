@@ -25,10 +25,6 @@ alias rc='bundle exec rails c'
 # alias python3='/usr/local/Cellar/python/3.6.4_3/bin/python3'
 
 # dir jumpers
-alias gorails='cd ~/Programming/Rails'
-alias goruby='cd ~/Programming/Ruby'
-alias gojs='cd ~/Programming/JavaScript'
-
 alias xctags="ctags -R --languages=ruby --exclude=.git --exclude=log"
 alias h='history -100 -1'
 alias startpg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -46,3 +42,6 @@ alias build-tunnel='ssh -D 8080 -C -N adomokos@build0'
 
 # Clojure
 alias lt='time lein difftest'
+
+# Haskell
+alias sbf='stack build --fast'
