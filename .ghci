@@ -4,5 +4,6 @@
 :seti -XScopedTypeVariables
 
 :set -Wall
+:set -fno-warn-type-defaults
 :set +s
 :set +t
