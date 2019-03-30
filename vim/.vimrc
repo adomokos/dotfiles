@@ -1,41 +1,33 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Plugins
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-fireplace'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'fatih/vim-go'
-Plugin 'ctrlp.vim'
-Plugin 'neovimhaskell/haskell-vim'
-Plugin 'elixir-editors/vim-elixir'
-Plugin 'ElmCast/elm-vim'
-Plugin 'alx741/vim-hindent'
-Plugin 'neomake/neomake'
-Plugin 'parsonsmatt/intero-neovim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fireplace'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'jiangmiao/auto-pairs'
+Plug 'fatih/vim-go'
+Plug 'https://github.com/kien/ctrlp.vim.git'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'ElmCast/elm-vim'
+Plug 'alx741/vim-hindent'
+Plug 'neomake/neomake'
+Plug 'parsonsmatt/intero-neovim'
 
-call vundle#end()
-filetype plugin indent on
-
-" Enable the built-in matchit vim
-" runtime macros/matchit.vim
+call plug#end()
 
 " vim-airline is just not working without this
 set laststatus=2
