@@ -25,10 +25,6 @@ code=~/Code/Active
 vendor=~/Code/Vendor
 
 ###### Functions
-pless() {
-  bin/pygmentize $1 | less -r
-}
-
 e() {
   nvim $*
 }
@@ -46,10 +42,6 @@ vpn() {
   osascript ~/bin/vpn_connector.scpt
 }
 
-gh() {
-  rvm 1.8.7 && github $* && rvm 1.9.1
-}
-
 gsa() {
   git stash apply stash@{$1}
 }
@@ -64,6 +56,29 @@ color-my-code() {
   bundle exec pygmentize -f rtf -O style=colorful $1 | pbcopy
 }
 
+# Haskell related functions
+stack-ghcid() {
+  local execute test project
+  project=$(basename "$(pwd)")
+
+  # build dependencies with --fast
+  stack build "$project" --fast --pedantic --dependencies-only
+
+  if [ -z "$1" ]; then
+      test="main"
+  else
+      test="Test.Hspec.hspec $1.spec"
+  fi
+  execute="stack ghci $project\:lib $project\:spec --no-build --interleaved-output --ghci-options '+RTS -N'"
+
+  stack exec -- ghcid --command "$execute" --test "$test"
+}
+
+# Docker functions
+rm-exited() {
+  docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm
+}
+
 # make meta+bksp kill path components
 function backward-kill-partial-word {
         local WORDCHARS="${WORDCHARS//[\/.]/}"
@@ -72,10 +87,6 @@ function backward-kill-partial-word {
 
 vack () {
   vim $(ack -g $@)
-}
-
-runcuke() {
-  time cucumber features -t $1
 }
 
 mkcd() {
