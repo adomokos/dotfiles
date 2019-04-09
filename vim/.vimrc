@@ -24,8 +24,9 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'alx741/vim-hindent'
-Plug 'neomake/neomake'
-Plug 'parsonsmatt/intero-neovim'
+Plug 'w0rp/ale'
+" Plug 'neomake/neomake'
+" Plug 'parsonsmatt/intero-neovim'
 
 call plug#end()
 
@@ -68,6 +69,9 @@ set wildignore+=*.o,*.obj,.git,*.rbc
 set nobackup
 set nowritebackup
 set noswapfile
+
+" Allow adjusting split panes with mouse
+set mouse=v
 
 " Make sure vim can read shell settings (sourced in ~/.profile)
 set shell=/bin/sh
