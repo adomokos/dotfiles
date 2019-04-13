@@ -1,6 +1,8 @@
 [user]
 	name = Attila Domokos
 	email = adomokos@gmail.com
+[core]
+	editor = nvim
 [color]
 	ui = auto
 [alias]
