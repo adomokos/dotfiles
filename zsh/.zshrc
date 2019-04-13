@@ -1,16 +1,16 @@
 ###### Autoloads
 autoload -U promptinit
-autoload colors         # named color arrays
+autoload colors # named color arrays
 colors
-autoload -U compinit       # tab completion
+autoload -U compinit # tab completion
 compinit
 
 ###### Options
-setopt auto_cd          # auto cd when dir name is typed
-setopt cdablevars       # cd into named vars
-setopt prompt_subst     # enable var expansion in prompt
+setopt auto_cd # auto cd when dir name is typed
+setopt cdablevars # cd into named vars
+setopt prompt_subst # enable var expansion in prompt
 setopt complete_in_word # when completing, keep cursor inline
-setopt always_to_end    # move cursor to end of word if match inserted
+setopt always_to_end # move cursor to end of word if match inserted
 
 source ~/.zsh/title.zsh
 
@@ -25,6 +25,8 @@ code=~/Code/Active
 vendor=~/Code/Vendor
 
 ###### Functions
+source ~/.zsh/func/ghci
+
 e() {
   nvim $*
 }

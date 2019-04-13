@@ -1,0 +1,21 @@
+run_ghci() {
+  project_name=${PWD##*/}
+  PGDATABASE=classroom_test stack ghci "${project_name}:lib" "${project_name}:test:spec" --ghci-options "-interactive-print=Text.Pretty.Simple.pPrint -fobject-code -j +RTS -A128m -n2m -RTS" --package pretty-simple
+}
+
+run_ghci_lib() {
+  project_name=${PWD##*/}
+  PGDATABASE=classroom_test stack ghci "${project_name}:lib" --ghci-options "-interactive-print=Text.Pretty.Simple.pPrint -fobject-code" --package pretty-simple
+}
+
+run_ghcid() {
+  project_name=${PWD##*/}
+  ## Have ghcid run the test suite for the project specs on successful recompile
+  ghcid --command "stack ghci "${project_name}:lib" "${project_name}:test:spec" --ghci-options='-fobject-code'" \
+        --test "main"
+}
+
+run_build_fast() {
+  project_name=${PWD##*/}
+  time stack build --fast "${project_name}:lib" "${project_name}:test:spec" --no-run-tests --ghc-options='-fobject-code -j +RTS -A128m -n2m -RTS'
+}
