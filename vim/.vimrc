@@ -23,7 +23,6 @@ Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'ElmCast/elm-vim'
-Plug 'alx741/vim-hindent'
 Plug 'w0rp/ale'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
@@ -145,7 +144,6 @@ map <Leader>f :CommandTFlush<CR>\|:CommandT<CR>
 map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
 
 " CtrlP
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 " Use the project root where the (empty) `.ctrlp` file is found
