@@ -73,8 +73,8 @@ set noswapfile
 " Allow adjusting split panes with mouse
 set mouse=v
 
-" Make sure vim can read shell settings (sourced in ~/.profile)
-set shell=/bin/sh
+" Use zsh
+:set shell=/bin/zsh
 
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell        " turn off visual bell
@@ -148,6 +148,8 @@ map <Leader>cf :CommandTFlush<CR>\|:CommandT %%<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+" Use the project root where the (empty) `.ctrlp` file is found
+let g:ctrlp_root_markers = ['.ctrlp']
 " Use the current dir for working path if nothing defined
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
