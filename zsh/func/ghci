@@ -1,6 +1,8 @@
 run_ghci() {
   project_name=${PWD##*/}
-  PGDATABASE=classroom_test stack ghci "${project_name}:lib" "${project_name}:test:spec" --ghci-options "-interactive-print=Text.Pretty.Simple.pPrint -fobject-code -j +RTS -A128m -n2m -RTS" --package pretty-simple
+  LOG_LOCATION=/dev/null PGDATABASE=classroom_test stack ghci "${project_name}:lib" "${project_name}:test:spec" \
+    --ghci-options "-interactive-print=Text.Pretty.Simple.pPrint -j +RTS -A128m -n2m -RTS" \
+    --package pretty-simple
 }
 
 run_ghci_lib() {
@@ -17,5 +19,12 @@ run_ghcid() {
 
 run_build_fast() {
   project_name=${PWD##*/}
-  time stack build --fast "${project_name}:lib" "${project_name}:test:spec" --no-run-tests --ghc-options='-fobject-code -j +RTS -A128m -n2m -RTS'
+  time stack build --fast "${project_name}:lib" "${project_name}:test:spec" \
+    --no-run-tests --ghc-options='-fobject-code -j +RTS -A128m -n2m -RTS'
+}
+
+run_tests() {
+  project_name=${PWD##*/}
+  time stack build --fast --test "${project_name}:lib" "${project_name}:test:spec" \
+    --ghc-options='-fobject-code -j +RTS -A128m -n2m -RTS'
 }
