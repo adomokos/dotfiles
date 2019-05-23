@@ -24,6 +24,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'w0rp/ale'
+Plug 'kassio/neoterm'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
 
@@ -185,3 +186,13 @@ map <leader>= :Tabularize /=<CR>
 map <leader>- :Tabularize /-><CR>
 map <leader>, :Tabularize /,<CR>
 map <leader># :Tabularize /#-}<CR>
+
+" Horizontal split should open below, vertical on the right
+set splitbelow
+set splitright
+
+" Neoterm settings
+" if exists('g:neoterm_loaded')
+  " let g:neoterm_autoinsert = 1
+  " let g:neoterm_default_mod = 'vertical'
+" endif
