@@ -23,6 +23,9 @@ export WORDCHARS="${WORDCHARS:s#/#}"
 # For pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
 
+# For gsed (gnu-sed)
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
 # For ES
 export ES_HOME=$HOME/Documents/elasticsearch-5.4.1
 

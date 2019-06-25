@@ -14,7 +14,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fireplace'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'jiangmiao/auto-pairs'
@@ -22,9 +21,11 @@ Plug 'fatih/vim-go'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'elixir-editors/vim-elixir'
-Plug 'ElmCast/elm-vim'
 Plug 'w0rp/ale'
 Plug 'kassio/neoterm'
+" JS and React development
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
 
@@ -43,6 +44,9 @@ syntax on
 
 set visualbell " no beeping, thx
 set autoindent
+
+" No need ofr modelines - https://thehackernews.com/2019/06/linux-vim-vulnerability.html
+set modelines=0
 
 " Whitespace stuff
 set nowrap

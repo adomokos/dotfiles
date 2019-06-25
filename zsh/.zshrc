@@ -78,6 +78,7 @@ stack-ghcid() {
 
 # Docker functions
 rm-exited() {
+  # docker system prune -a
   docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs docker rm
 }
 
