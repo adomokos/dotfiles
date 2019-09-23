@@ -122,4 +122,14 @@ prompt jaf
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # Adding for pyenv
-# eval "$(pyenv init -)"
+eval "$(pyenv init -)"
+
+# Make nix happy
+. /Users/adomokos/.nix-profile/etc/profile.d/nix.sh
+
+# Run Kotlin programs
+function kotlinr() {
+  echo "Compiling >$1<, please wait..."
+  kotlinc $1 -include-runtime -d out.jar
+  java -jar out.jar
+}

@@ -15,6 +15,9 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 " Running Haskell files as scripts
 nmap ,r :!time stack exec -- runhaskell --ghc-arg=-isrc/ %<CR>
 
+" Reload on save
+" autocmd BufWritePost *.hs execute ':1T :r'
+
 " ale configs
 let g:ale_fixers = {
   \ 'haskell': ['brittany', 'hlint', 'stylish-haskell'],

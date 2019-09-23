@@ -26,6 +26,7 @@ Plug 'kassio/neoterm'
 " JS and React development
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'udalov/kotlin-vim'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
 
