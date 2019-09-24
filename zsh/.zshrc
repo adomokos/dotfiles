@@ -125,7 +125,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 eval "$(pyenv init -)"
 
 # Make nix happy
-. /Users/adomokos/.nix-profile/etc/profile.d/nix.sh
+# . /Users/adomokos/.nix-profile/etc/profile.d/nix.sh
 
 # Run Kotlin programs
 function kotlinr() {
