@@ -46,7 +46,7 @@ syntax on
 set visualbell " no beeping, thx
 set autoindent
 
-" No need ofr modelines - https://thehackernews.com/2019/06/linux-vim-vulnerability.html
+" No need of modelines - https://thehackernews.com/2019/06/linux-vim-vulnerability.html
 set modelines=0
 
 " Whitespace stuff
