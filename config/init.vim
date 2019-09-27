@@ -175,6 +175,7 @@ let g:AutoPairsShortcutFastWrap="<C-e>"
 
 if !exists("autocmmands_loaded")
   let autocommands_loaded = 1
+  au Filetype kotlin source ~/.vim/scripts/kotlin.vim
   au Filetype clojure source ~/.vim/scripts/clojure.vim
   " au Filetype elixir source ~/.vim/scripts/elixir.vim - don't need it just
   " yet
