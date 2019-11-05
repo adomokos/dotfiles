@@ -30,10 +30,8 @@ PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export ES_HOME=$HOME/Documents/elasticsearch-5.4.1
 
 # Having GOPATH will make Go(lang) Happy
-export GOPATH=~/Programming/Go/projects/
-export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=/Users/attila.domokos/.go
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 
 # Setting up nvm
 export NVM_DIR="$HOME/.nvm"
