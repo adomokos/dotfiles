@@ -133,3 +133,12 @@ function kotlinr() {
   kotlinc $1 -include-runtime -d out.jar
   java -jar out.jar
 }
+
+# NVM setup
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/attila.domokos/.sdkman"
+[[ -s "/Users/attila.domokos/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/attila.domokos/.sdkman/bin/sdkman-init.sh"
