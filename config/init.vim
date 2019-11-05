@@ -24,8 +24,8 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'w0rp/ale'
 Plug 'kassio/neoterm'
 " JS and React development
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'pangloss/vim-javascript'
 Plug 'udalov/kotlin-vim'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
@@ -182,6 +182,7 @@ if !exists("autocmmands_loaded")
   au Filetype ruby source ~/.vim/scripts/ruby.vim
   au Filetype haskell source ~/.vim/scripts/haskell.vim
   au Filetype go source ~/.vim/scripts/go.vim
+  au Filetype python source ~/.vim/scripts/python.vim
 endif
 
 if exists("&wildignorecase")
@@ -202,3 +203,18 @@ set splitright
   " let g:neoterm_autoinsert = 1
   " let g:neoterm_default_mod = 'vertical'
 " endif
+
+" ale configs
+" \ 'javascript': ['eslint', 'prettier'],
+let g:ale_fixers = {
+  \ 'haskell': ['brittany', 'hlint', 'stylish-haskell'],
+  \ 'python': ['autopep8'],
+  \ 'sh': ['shfmt'],
+  \ }
+
+let g:ale_linters = {
+  \ 'haskell': ['hlint'],
+  \ 'python': ['flake8', 'autopep8']
+  \ }
+
+let g:ale_fix_on_save = 1
