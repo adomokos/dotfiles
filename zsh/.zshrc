@@ -37,7 +37,7 @@ reload() {
 }
 
 make-init() {
-  curl https://gist.githubusercontent.com/adomokos/2fd95840d59b19bbb3f4/raw/7b548cd3fda0dab958ecb0e0955fbadc1af6ef6e/Makefile > Makefile
+  curl https://gist.githubusercontent.com/adomokos/2fd95840d59b19bbb3f4/raw/d884a0562ea508e6027844e289388736fe2eefac/Makefile > Makefile
 }
 
 vpn() {
