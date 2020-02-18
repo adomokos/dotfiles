@@ -41,3 +41,6 @@ alias ctags="`brew --prefix`/bin/ctags"
 
 # Haskell
 alias sbf='stack build --fast'
+
+# Kubernetes
+alias k8='kubectl'
