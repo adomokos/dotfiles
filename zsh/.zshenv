@@ -23,6 +23,9 @@ export WORDCHARS="${WORDCHARS:s#/#}"
 # For pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
 
+# For poetry Python
+export PATH=$PATH:$HOME/.poetry/bin
+
 # For gsed (gnu-sed)
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
