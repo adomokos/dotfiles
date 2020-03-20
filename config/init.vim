@@ -183,6 +183,7 @@ if !exists("autocmmands_loaded")
   au Filetype haskell source ~/.vim/scripts/haskell.vim
   au Filetype go source ~/.vim/scripts/go.vim
   au Filetype python source ~/.vim/scripts/python.vim
+  au Filetype javascript source ~/.vim/scripts/javascript.vim
 endif
 
 if exists("&wildignorecase")
