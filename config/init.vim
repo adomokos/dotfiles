@@ -27,6 +27,7 @@ Plug 'kassio/neoterm'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'udalov/kotlin-vim'
+Plug 'integralist/vim-mypy'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
 
@@ -215,7 +216,7 @@ let g:ale_fixers = {
 
 let g:ale_linters = {
   \ 'haskell': ['hlint'],
-  \ 'python': ['flake8', 'autopep8']
+  \ 'python': ['flake8', 'autopep8','mypy']
   \ }
 
 let g:ale_fix_on_save = 1
