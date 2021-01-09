@@ -39,4 +39,4 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias sbf='stack build --fast'
 
 # Kubernetes
-alias k8='kubectl'
+alias kc='kubectl'
