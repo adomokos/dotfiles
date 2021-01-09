@@ -43,3 +43,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Make Docker Desktop
 export FR_DOCKERHOST=docker.for.mac.localhost
+
+# Set up gcloud
+export PATH=$PATH:$HOME/.google-cloud-sdk/bin
