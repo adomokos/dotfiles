@@ -28,6 +28,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'udalov/kotlin-vim'
 Plug 'integralist/vim-mypy'
+Plug 'hashivim/vim-terraform'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
 
@@ -185,6 +186,7 @@ if !exists("autocmmands_loaded")
   au Filetype go source ~/.vim/scripts/go.vim
   au Filetype python source ~/.vim/scripts/python.vim
   au Filetype javascript source ~/.vim/scripts/javascript.vim
+  au Filetype typescript source ~/.vim/scripts/typescript.vim
 endif
 
 if exists("&wildignorecase")
@@ -206,17 +208,24 @@ set splitright
   " let g:neoterm_default_mod = 'vertical'
 " endif
 
+" ctrlp should ignore everything not in .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " ale configs
 " \ 'javascript': ['eslint', 'prettier'],
 let g:ale_fixers = {
   \ 'haskell': ['brittany', 'hlint', 'stylish-haskell'],
   \ 'python': ['autopep8'],
+  \ 'javascript': ['prettier', 'eslint'],
+  \ 'typescript': ['prettier', 'eslint'],
   \ 'sh': ['shfmt'],
   \ }
 
 let g:ale_linters = {
   \ 'haskell': ['hlint'],
-  \ 'python': ['flake8', 'autopep8','mypy']
+  \ 'python': ['flake8', 'autopep8','mypy'],
+  \ 'javascript': ['prettier', 'eslint'],
+  \ 'typescript': ['prettier', 'eslint'],
   \ }
 
 let g:ale_fix_on_save = 1
