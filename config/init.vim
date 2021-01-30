@@ -20,22 +20,25 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'fatih/vim-go'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'elixir-editors/vim-elixir'
+" Plug 'elixir-editors/vim-elixir'
 Plug 'w0rp/ale'
 Plug 'kassio/neoterm'
 " JS and React development
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'udalov/kotlin-vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'mxw/vim-jsx'
+" Plug 'udalov/kotlin-vim'
 Plug 'integralist/vim-mypy'
 Plug 'hashivim/vim-terraform'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 " Plug 'neomake/neomake'
 " Plug 'parsonsmatt/intero-neovim'
 
 call plug#end()
 
-" vim-airline is just not working without this
-set laststatus=2
+" Disable neovim installed plugins: https://github.com/neovim/neovim/blob/f6ac375604238c94d3dc3eeb9b82e67417460806/runtime/autoload/provider/python.vim
+" let g:loaded_python_provider=1
+" let g:loaded_python3_provider=1
 
 set relativenumber
 set number
@@ -85,6 +88,9 @@ set mouse=v
 
 set visualbell t_vb=    " turn off error beep/flash
 set novisualbell        " turn off visual bell
+
+set laststatus=2
+
 
 " Thorfile, Rakefile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,config.ru}    set ft=ruby
@@ -162,15 +168,8 @@ let g:ctrlp_custom_ignore = {
       \ 'dir': '\v[\/]\.(git|hg|svn)|vendor$'
     \ }
 
-"##" for VimClojure
-"##let g:vimclojure#HighlightBuiltins = 1
-"##let g:vimclojure#ParenRainbow = 1
-
 " Disable folding for vim markdown
 let g:vim_markdown_folding_disabled=1
-
-" Add bufferline to vim-airline
-let g:airline_section_y = 'BN: %{bufnr("%")}'
 
 " Modify auto-pair's <M-e> (Alt-e) to <C-e>
 let g:AutoPairsShortcutFastWrap="<C-e>"
@@ -187,6 +186,7 @@ if !exists("autocmmands_loaded")
   au Filetype python source ~/.vim/scripts/python.vim
   au Filetype javascript source ~/.vim/scripts/javascript.vim
   au Filetype typescript source ~/.vim/scripts/typescript.vim
+  au Filetype typescriptreact source ~/.vim/scripts/typescriptreact.vim
 endif
 
 if exists("&wildignorecase")
@@ -211,21 +211,36 @@ set splitright
 " ctrlp should ignore everything not in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" ale configs
+
+" Ale
 " \ 'javascript': ['eslint', 'prettier'],
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_fixers = {
   \ 'haskell': ['brittany', 'hlint', 'stylish-haskell'],
-  \ 'python': ['autopep8'],
-  \ 'javascript': ['prettier', 'eslint'],
-  \ 'typescript': ['prettier', 'eslint'],
+  \ 'python': ['black'],
   \ 'sh': ['shfmt'],
   \ }
 
 let g:ale_linters = {
   \ 'haskell': ['hlint'],
-  \ 'python': ['flake8', 'autopep8','mypy'],
-  \ 'javascript': ['prettier', 'eslint'],
-  \ 'typescript': ['prettier', 'eslint'],
+  \ 'python': ['black', 'mypy'],
   \ }
 
 let g:ale_fix_on_save = 1
+
+
+" Airline
+" vim-airline is just not working without this
+let g:airline_extensions = []
+
+" Add bufferline to vim-airline
+let g:airline_left_sep  = ''
+let g:airline_right_sep = ''
+let g:airline#extensions#ale#enabled = 1
+let airline#extensions#ale#error_symbol = 'E:'
+let airline#extensions#ale#warning_symbol = 'W:'
+let g:airline_section_y = 'BN: %{bufnr("%")}'
