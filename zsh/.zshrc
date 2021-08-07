@@ -121,9 +121,6 @@ prompt jaf
 # Adding for rbenv, enable shims and autocompletion
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
-# Adding for pyenv
-eval "$(pyenv init -)"
-
 # Make nix happy
 # . /Users/adomokos/.nix-profile/etc/profile.d/nix.sh
 
@@ -153,3 +150,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Configure asdf - https://asdf-vm.com/#/core-manage-asdf
 . $HOME/.asdf/asdf.sh
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
