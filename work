@@ -8,21 +8,17 @@ if [ $? != 0 ]
 then
   cd ~/Projects/AuditSight/code/
 
-  # Monolith (1)
-  tmux new -d -s $SESSION_NAME -n monolith
-  tmux send-keys -t $SESSION_NAME:1 "cd monolith" C-m
+  tmux new -d -s $SESSION_NAME -n cyclops
+  tmux send-keys -t $SESSION_NAME:1 "cd cyclops" C-m
 
-  tmux new-window -n odw -t $SESSION_NAME:2
-  tmux send-keys -t $SESSION_NAME:2 "cd odw" C-m
+  tmux new-window -n infra -t $SESSION_NAME:2
+  tmux send-keys -t $SESSION_NAME:2 "cd infrastructure" C-m
 
-  tmux new-window -n tf-monorepo -t $SESSION_NAME:3
-  tmux send-keys -t $SESSION_NAME:3 "cd terraform-monorepo" C-m
+  tmux new-window -n mb-fe -t $SESSION_NAME:3
+  tmux send-keys -t $SESSION_NAME:3 "cd mb/audit-sight-frontend" C-m
 
-  tmux new-window -n order-service -t $SESSION_NAME:4
-  tmux send-keys -t $SESSION_NAME:4 "cd order-service" C-m
-
-  tmux new-window -n mr-radar -t $SESSION_NAME:5
-  tmux send-keys -t $SESSION_NAME:5 "cd mr-radar" C-m
+  tmux new-window -n findstar -t $SESSION_NAME:4
+  tmux send-keys -t $SESSION_NAME:4 "cd findstar" C-m
 
   # Start out on the first window when we attach
   tmux select-window -t $SESSION_NAME:1
