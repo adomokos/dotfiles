@@ -20,12 +20,11 @@ set -o emacs
 ###### Aliases
 source ~/.zsh/.zsh_aliases
 
-###### Directory Shortcuts
-code=~/Code/Active
-vendor=~/Code/Vendor
-
 ###### Functions
 source ~/.zsh/func/ghci
+
+###### ZSH Env
+source ~/.zshenv
 
 e() {
   nvim $*
@@ -124,13 +123,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 # Make nix happy
 # . /Users/adomokos/.nix-profile/etc/profile.d/nix.sh
 
-# Run Kotlin programs
-function kotlinr() {
-  echo "Compiling >$1<, please wait..."
-  kotlinc $1 -include-runtime -d out.jar
-  java -jar out.jar
-}
-
 # NVM setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
@@ -145,8 +137,6 @@ if [ -f '~/.google-cloud-sdk/path.zsh.inc' ]; then . '~/.google-cloud-sdk/path.z
 
 # The next line enables shell command completion for gcloud.
 if [ -f '~/.google-cloud-sdk/completion.zsh.inc' ]; then . '~/.google-cloud-sdk/completion.zsh.inc'; fi
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Configure asdf - https://asdf-vm.com/#/core-manage-asdf
 . $HOME/.asdf/asdf.sh
