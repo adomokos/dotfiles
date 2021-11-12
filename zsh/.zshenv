@@ -1,6 +1,6 @@
 fpath=($fpath $HOME/.zsh/func)
 export fpath
-export PATH="/Users/adomokos/bin:/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/Users/adomokos/bin:/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:/opt/homebrew/bin:$PATH"
 
 # Adding hpack for Haskell
 export PATH="$HOME/.local/bin:$PATH"
