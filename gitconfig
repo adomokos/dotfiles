@@ -1,39 +1,40 @@
 [user]
-	name = Attila Domokos
-	email = adomokos@gmail.com
+  name = Attila Domokos
+  email = adomokos@gmail.com
 [core]
-	editor = nvim
+  editor = nvim
 [color]
-	ui = auto
+  ui = auto
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	br = branch
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
   ls-subtrees = !"git log | grep git-subtree-dir | tr -d ' ' | cut -d ':' -f2 | sort | uniq"
+  compare = log --left-right --graph --cherry-pick --oneline
 [merge]
-	summary = true
-	tool = p4
+  summary = true
+  tool = p4
 [difftool "p4"]
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
-	keepBackup = false
-	trustExitCode = false
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
+  keepBackup = false
+  trustExitCode = false
 [mergetool "p4"]
-	cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
-	keepBackup = false
-	trustExitCode = false
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
+  keepBackup = false
+  trustExitCode = false
 [mergetool]
-	keepBackup = false
+  keepBackup = false
 [push]
-	default = matching
-	followTags = true
+  default = matching
+  followTags = true
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
-	ff = only
+  ff = only
