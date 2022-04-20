@@ -112,8 +112,8 @@ source ~/.zsh/title.zsh
 ###### Prompt
 
 PS1="%n@%m:%~%# "
-PROMPT='%{$fg_bold[red]%}%m%{$fg[white]%}:%{$fg[blue]%}%~ %{$fg_bold[yellow]%}$(git-prompt) %{$fg_bold[white]%}✈ %{$reset_color%}'
-PROMPT='$(git-prompt)%{$fg_bold[white]%}✈ %{$reset_color%}'
+# PROMPT='%{$fg_bold[red]%}%m%{$fg[white]%}:%{$fg[blue]%}%~ %{$fg_bold[yellow]%}$(git-prompt) %{$fg_bold[white]%}✈ %{$reset_color%}'
+# PROMPT='$(git-prompt)%{$fg_bold[white]%}✈ %{$reset_color%}'
 promptinit
 prompt jaf
 
@@ -139,7 +139,8 @@ if [ -f '~/.google-cloud-sdk/path.zsh.inc' ]; then . '~/.google-cloud-sdk/path.z
 if [ -f '~/.google-cloud-sdk/completion.zsh.inc' ]; then . '~/.google-cloud-sdk/completion.zsh.inc'; fi
 
 # Configure asdf - https://asdf-vm.com/#/core-manage-asdf
-. $HOME/.asdf/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
