@@ -40,3 +40,6 @@ alias sbf='stack build --fast'
 
 # Kubernetes
 alias kc='kubectl'
+
+# awsp - https://github.com/johnnyopao/awsp
+alias awsp="source _awsp"
