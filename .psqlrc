@@ -6,7 +6,7 @@
 \set VERBOSITY verbose
 \set PROMPT1 '%n@%m:%>/%/%x%# '
 \set IGNOREEOF 5
-\pset null '<<NULL>>'
+\pset null '<NULL>'
 \pset linestyle unicode
 
 /*
