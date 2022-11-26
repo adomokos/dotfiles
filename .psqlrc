@@ -4,10 +4,19 @@
 \encoding SQL_ASCII
 \set AUTOCOMMIT off
 \set VERBOSITY verbose
-\set PROMPT1 '%n@%m:%>/%/%x%# '
+\set PROMPT1 '%n@%m:%>/%/%~%x%# '
+-- \set PROMPT1 '%~%x%# '
 \set IGNOREEOF 5
+\x auto
+\set ON_ERROR_STOP on
+
+-- sets options
 \pset null '<NULL>'
-\pset linestyle unicode
+\pset linestyle 'unicode'
+\pset unicode_border_linestyle single
+\pset unicode_column_linestyle single
+\pset unicode_header_linestyle double
+set intervalstyle to 'postgres_verbose';
 
 /*
 Don't use these settings for now
@@ -17,5 +26,5 @@ Don't use these settings for now
 */
 
 \timing
-set application_name to adomokosmba; commit;
+set application_name to adomokosmbp; commit;
 set bytea_output to escape; commit;
