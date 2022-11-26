@@ -23,6 +23,12 @@ then
   tmux new-window -n infra -t $SESSION_NAME:5
   tmux send-keys -t $SESSION_NAME:5 "cd infrastructure" C-m
 
+  tmux new-window -n findstar -t $SESSION_NAME:6
+  tmux send-keys -t $SESSION_NAME:6 "cd findstar" C-m
+
+  tmux new-window -n auditcore -t $SESSION_NAME:7
+  tmux send-keys -t $SESSION_NAME:7 "cd auditcore" C-m
+
   # Start out on the first window when we attach
   tmux select-window -t $SESSION_NAME:1
 fi
