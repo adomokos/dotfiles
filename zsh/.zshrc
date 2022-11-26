@@ -30,6 +30,10 @@ e() {
   nvim $*
 }
 
+kill-di() {
+  docker rm -f $$(docker ps -qa)
+}
+
 reload() {
   source ~/.zshenv
   source ~/.zshrc
@@ -145,3 +149,5 @@ if [ -f '~/.google-cloud-sdk/completion.zsh.inc' ]; then . '~/.google-cloud-sdk/
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+
+[ -f "/Users/adomokos/.ghcup/env" ] && source "/Users/adomokos/.ghcup/env" # ghcup-env

@@ -46,3 +46,6 @@ export FR_DOCKERHOST=docker.for.mac.localhost
 
 # Set up gcloud
 export PATH=$PATH:$HOME/.google-cloud-sdk/bin
+
+# Set up ghcup
+export PATH=$PATH:$HOME/.ghcup/bin
