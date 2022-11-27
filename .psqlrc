@@ -4,7 +4,7 @@
 \encoding SQL_ASCII
 \set AUTOCOMMIT off
 \set VERBOSITY verbose
-\set PROMPT1 '%n@%m:%>/%/%~%x%# '
+\set PROMPT1 '%n@%m:%>/%~%x%# '
 -- \set PROMPT1 '%~%x%# '
 \set IGNOREEOF 5
 \x auto
