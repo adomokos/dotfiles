@@ -104,7 +104,9 @@ au FocusGained * :checktime
 " Default color scheme
 syntax enable
 set t_Co=256
+set background=dark
 color slate
+highlight Normal ctermbg=black
 
 " Color the line number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
