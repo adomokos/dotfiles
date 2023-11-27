@@ -49,3 +49,13 @@ export PATH=$PATH:$HOME/.google-cloud-sdk/bin
 
 # Set up ghcup
 export PATH=$PATH:$HOME/.ghcup/bin
+
+# Set up rust
+export PATH=$PATH:$HOME/.asdf/installs/rust/1.67.1/bin
+
+# Set up psql with libpq - without postgres
+export PATH=$PATH:/opt/homebrew/opt/libpq/bin
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
+
+export PATH="/opt/homebrew/sbin:$PATH"
