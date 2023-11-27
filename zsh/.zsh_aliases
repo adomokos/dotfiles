@@ -33,7 +33,7 @@ alias h='history -100 -1'
 alias lt='time lein difftest'
 
 # Homebrew Alias
-alias ctags="`brew --prefix`/bin/ctags"
+# alias ctags="`brew --prefix`/bin/ctags"
 
 # Haskell
 alias sbf='stack build --fast'
