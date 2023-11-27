@@ -11,23 +11,20 @@ then
   tmux new -d -s $SESSION_NAME -n cyclops
   tmux send-keys -t $SESSION_NAME:1 "cd cyclops" C-m
 
-  tmux new-window -n lg-fe -t $SESSION_NAME:2
-  tmux send-keys -t $SESSION_NAME:2 "cd cyclops/looking-glass/frontend" C-m
+  tmux new-window -n db -t $SESSION_NAME:2
+  tmux send-keys -t $SESSION_NAME:2 "cd cyclops/db" C-m
 
-  tmux new-window -n db -t $SESSION_NAME:3
-  tmux send-keys -t $SESSION_NAME:3 "cd cyclops/db" C-m
+  tmux new-window -n infra -t $SESSION_NAME:3
+  tmux send-keys -t $SESSION_NAME:3 "cd infrastructure" C-m
 
-  tmux new-window -n support -t $SESSION_NAME:4
-  tmux send-keys -t $SESSION_NAME:4 "cd cyclops/support" C-m
+  tmux new-window -n findstar -t $SESSION_NAME:4
+  tmux send-keys -t $SESSION_NAME:4 "cd findstar" C-m
 
-  tmux new-window -n infra -t $SESSION_NAME:5
-  tmux send-keys -t $SESSION_NAME:5 "cd infrastructure" C-m
+  tmux new-window -n findstar/db -t $SESSION_NAME:5
+  tmux send-keys -t $SESSION_NAME:5 "cd findstar/db" C-m
 
-  tmux new-window -n findstar -t $SESSION_NAME:6
-  tmux send-keys -t $SESSION_NAME:6 "cd findstar" C-m
-
-  tmux new-window -n auditcore -t $SESSION_NAME:7
-  tmux send-keys -t $SESSION_NAME:7 "cd auditcore" C-m
+  tmux new-window -n auditcore -t $SESSION_NAME:6
+  tmux send-keys -t $SESSION_NAME:6 "cd auditcore" C-m
 
   # Start out on the first window when we attach
   tmux select-window -t $SESSION_NAME:1
