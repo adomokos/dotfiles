@@ -59,3 +59,6 @@ export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/libpq/include"
 
 export PATH="/opt/homebrew/sbin:$PATH"
+
+# For GPG to sign commits with git
+export GPG_TTY=$(tty)
