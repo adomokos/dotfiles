@@ -151,3 +151,7 @@ fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
 [ -f "/Users/adomokos/.ghcup/env" ] && source "/Users/adomokos/.ghcup/env" # ghcup-env
+
+jwt-decode() {
+  $1 jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
+}
