@@ -1,7 +1,7 @@
 [user]
   name = Attila Domokos
   email = adomokos@gmail.com
-  signingkey = B69EE2A1878B6426
+  signingkey = 096C5CA3900D5026
 [core]
   editor = nvim
 [color]

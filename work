@@ -6,25 +6,16 @@ tmux has-session -t $SESSION_NAME
 
 if [ $? != 0 ]
 then
-  cd ~/Projects/AuditSight/code/
+  cd ~/Projects/BSMG/code/
 
-  tmux new -d -s $SESSION_NAME -n cyclops
-  tmux send-keys -t $SESSION_NAME:1 "cd cyclops" C-m
+  tmux new -d -s $SESSION_NAME -n monolith
+  tmux send-keys -t $SESSION_NAME:1 "cd monolith" C-m
 
   tmux new-window -n db -t $SESSION_NAME:2
-  tmux send-keys -t $SESSION_NAME:2 "cd cyclops/db" C-m
+  tmux send-keys -t $SESSION_NAME:2 "cd monolith" C-m
 
-  tmux new-window -n infra -t $SESSION_NAME:3
-  tmux send-keys -t $SESSION_NAME:3 "cd infrastructure" C-m
-
-  tmux new-window -n findstar -t $SESSION_NAME:4
-  tmux send-keys -t $SESSION_NAME:4 "cd findstar" C-m
-
-  tmux new-window -n findstar/db -t $SESSION_NAME:5
-  tmux send-keys -t $SESSION_NAME:5 "cd findstar/db" C-m
-
-  tmux new-window -n auditcore -t $SESSION_NAME:6
-  tmux send-keys -t $SESSION_NAME:6 "cd auditcore" C-m
+  tmux new-window -n ui -t $SESSION_NAME:3
+  tmux send-keys -t $SESSION_NAME:3 "cd monolith" C-m
 
   # Start out on the first window when we attach
   tmux select-window -t $SESSION_NAME:1
