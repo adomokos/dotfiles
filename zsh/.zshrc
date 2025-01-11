@@ -155,3 +155,7 @@ autoload -Uz compinit && compinit
 jwt-decode() {
   $1 jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
 }
+
+# Set up gpg
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
