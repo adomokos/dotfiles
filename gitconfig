@@ -1,7 +1,7 @@
 [user]
   name = Attila Domokos
   email = adomokos@gmail.com
-  signingkey = 096C5CA3900D5026
+  signingkey = CA5DF7FE
 [core]
   editor = nvim
 [color]
@@ -40,4 +40,6 @@
 [pull]
   ff = only
 [commit]
+  gpgsign = true
+[tag]
   gpgsign = true
