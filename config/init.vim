@@ -23,22 +23,17 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'w0rp/ale'
 Plug 'kassio/neoterm'
-" JS and React development
 Plug 'pangloss/vim-javascript'
-" Plug 'mxw/vim-jsx'
-" Plug 'udalov/kotlin-vim'
 Plug 'integralist/vim-mypy'
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-" Plug 'neomake/neomake'
+" Color Themes
+" Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 " Plug 'parsonsmatt/intero-neovim'
 
 call plug#end()
-
-" Disable neovim installed plugins: https://github.com/neovim/neovim/blob/f6ac375604238c94d3dc3eeb9b82e67417460806/runtime/autoload/provider/python.vim
-" let g:loaded_python_provider=1
-" let g:loaded_python3_provider=1
 
 set relativenumber
 set number
@@ -103,10 +98,12 @@ au FocusGained * :checktime
 
 " Default color scheme
 syntax enable
-set t_Co=256
+"set t_Co=256
 set background=dark
-color slate
-highlight Normal ctermbg=black
+colorscheme onedark
+" colorscheme gruvbox
+" color slate
+highlight Normal ctermbg=black guibg=black
 
 " Color the line number
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
