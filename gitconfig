@@ -1,7 +1,7 @@
 [user]
   name = Attila Domokos
   email = adomokos@gmail.com
-  signingkey = CA5DF7FE
+  signingkey = {{add_key_here}}
 [core]
   editor = nvim
 [color]
@@ -15,15 +15,7 @@
   compare = log --left-right --graph --cherry-pick --oneline
 [merge]
   summary = true
-  tool = p4
-[difftool "p4"]
-  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
-  keepBackup = false
-  trustExitCode = false
-[mergetool "p4"]
-  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
-  keepBackup = false
-  trustExitCode = false
+  tool = nvim
 [mergetool]
   keepBackup = false
 [push]
@@ -40,6 +32,6 @@
 [pull]
   ff = only
 [commit]
-  gpgsign = true
+  gpgSign = true
 [tag]
   gpgsign = true
