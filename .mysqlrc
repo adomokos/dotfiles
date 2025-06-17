@@ -1,0 +1,14 @@
+# Display the current date and time
+\! date +"%Y-%m-%d %H:%M:%S"
+
+# Set default character set to ASCII
+set character_set_client=ascii;
+set character_set_results=ascii;
+set character_set_connection=ascii;
+
+# Disable autocommit by default
+set autocommit=0;
+
+# Commit any changes immediately (MySQL has no direct equivalent of `set application_name` or `set bytea_output`)
+SET application_name='adomokosmbp';
+SET @bytea_output = 'escape';
