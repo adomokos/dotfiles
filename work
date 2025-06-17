@@ -6,16 +6,16 @@ tmux has-session -t $SESSION_NAME
 
 if [ $? != 0 ]
 then
-  cd ~/Projects/BSMG/code/
+  cd ~/Projects/Entromy/code/
 
-  tmux new -d -s $SESSION_NAME -n monolith
-  tmux send-keys -t $SESSION_NAME:1 "cd monolith" C-m
+  tmux new -d -s $SESSION_NAME -n nodus
+  tmux send-keys -t $SESSION_NAME:1 "cd nodus" C-m
 
   tmux new-window -n db -t $SESSION_NAME:2
-  tmux send-keys -t $SESSION_NAME:2 "cd monolith" C-m
+  tmux send-keys -t $SESSION_NAME:2 "cd nodus" C-m
 
   tmux new-window -n ui -t $SESSION_NAME:3
-  tmux send-keys -t $SESSION_NAME:3 "cd monolith" C-m
+  tmux send-keys -t $SESSION_NAME:3 "cd nodus" C-m
 
   # Start out on the first window when we attach
   tmux select-window -t $SESSION_NAME:1
