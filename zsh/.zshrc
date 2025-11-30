@@ -61,24 +61,6 @@ color-my-code() {
   bundle exec pygmentize -f rtf -O style=colorful $1 | pbcopy
 }
 
-# Haskell related functions
-stack-ghcid() {
-  local execute test project
-  project=$(basename "$(pwd)")
-
-  # build dependencies with --fast
-  stack build "$project" --fast --pedantic --dependencies-only
-
-  if [ -z "$1" ]; then
-      test="main"
-  else
-      test="Test.Hspec.hspec $1.spec"
-  fi
-  execute="stack ghci $project\:lib $project\:spec --no-build --interleaved-output --ghci-options '+RTS -N'"
-
-  stack exec -- ghcid --command "$execute" --test "$test"
-}
-
 # Docker functions
 rm-exited() {
   # docker system prune -a
@@ -121,9 +103,6 @@ PS1="%n@%m:%~%# "
 promptinit
 prompt jaf
 
-# Adding for rbenv, enable shims and autocompletion
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
 # Make nix happy
 # . /Users/adomokos/.nix-profile/etc/profile.d/nix.sh
 
@@ -131,10 +110,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
 [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/attila.domokos/.sdkman"
-[[ -s "/Users/attila.domokos/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/attila.domokos/.sdkman/bin/sdkman-init.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/.google-cloud-sdk/path.zsh.inc' ]; then . '~/.google-cloud-sdk/path.zsh.inc'; fi
@@ -149,8 +124,6 @@ if [ -f '~/.google-cloud-sdk/completion.zsh.inc' ]; then . '~/.google-cloud-sdk/
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
-
-[ -f "/Users/adomokos/.ghcup/env" ] && source "/Users/adomokos/.ghcup/env" # ghcup-env
 
 jwt-decode() {
   $1 jq -R 'split(".") | .[0],.[1] | @base64d | fromjson'
