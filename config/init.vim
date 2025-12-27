@@ -24,7 +24,6 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'w0rp/ale'
 Plug 'kassio/neoterm'
 Plug 'pangloss/vim-javascript'
-Plug 'integralist/vim-mypy'
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -209,28 +208,6 @@ set splitright
 
 " ctrlp should ignore everything not in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-
-" Ale
-" \ 'javascript': ['eslint', 'prettier'],
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_fixers = {
-  \ 'haskell': ['brittany', 'hlint', 'stylish-haskell'],
-  \ 'python': ['black'],
-  \ 'sh': ['shfmt'],
-  \ }
-
-let g:ale_linters = {
-  \ 'haskell': ['hlint'],
-  \ 'python': ['black', 'mypy'],
-  \ }
-
-let g:ale_fix_on_save = 1
-
 
 " Airline
 " vim-airline is just not working without this
