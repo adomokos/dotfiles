@@ -17,19 +17,3 @@ nmap ,r :!time stack exec -- runhaskell --ghc-arg=-isrc/ %<CR>
 
 " Reload on save
 " autocmd BufWritePost *.hs execute ':1T :r'
-
-" ale configs
-let g:ale_fixers = {
-  \ 'haskell': ['brittany', 'hlint', 'stylish-haskell'],
-  \ 'javascript': ['eslint', 'prettier'],
-  \ 'sh': ['shfmt'],
-  \ }
-
-let g:ale_linters = {
-  \ 'haskell': ['hlint']
-  \ }
-
-let g:ale_fix_on_save = 1
-let g:ale_haskell_brittany_executable='stack'
-let g:ale_haskell_hlint_executable='stack'
-let g:ale_haskell_stylish_haskell_executable='stack'
