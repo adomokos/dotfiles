@@ -20,9 +20,6 @@ set -o emacs
 ###### Aliases
 source ~/.zsh/.zsh_aliases
 
-###### Functions
-source ~/.zsh/func/ghci
-
 ###### ZSH Env
 source ~/.zshenv
 
