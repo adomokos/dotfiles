@@ -21,7 +21,6 @@ Plug 'fatih/vim-go'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'elixir-editors/vim-elixir'
-Plug 'w0rp/ale'
 Plug 'kassio/neoterm'
 Plug 'pangloss/vim-javascript'
 Plug 'hashivim/vim-terraform'
@@ -216,7 +215,7 @@ let g:airline_extensions = []
 " Add bufferline to vim-airline
 let g:airline_left_sep  = ''
 let g:airline_right_sep = ''
-let g:airline#extensions#ale#enabled = 1
-let airline#extensions#ale#error_symbol = 'E:'
-let airline#extensions#ale#warning_symbol = 'W:'
+" let g:airline#extensions#ale#enabled = 1
+" let airline#extensions#ale#error_symbol = 'E:'
+" let airline#extensions#ale#warning_symbol = 'W:'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
